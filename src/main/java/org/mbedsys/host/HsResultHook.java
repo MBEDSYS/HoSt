@@ -19,14 +19,37 @@ package org.mbedsys.host;
 import org.mbedsys.jvar.Variant;
 
 /**
+ * <p>
+ * This interface describes callback executed on command/read/write result.
+ * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
- * <p>
- * This interface describes callback object.
- * </p>
  */
-public interface HsCallback {
+public interface HsResultHook {
+	
+	/**
+	 * Error code: Command timeout
+	 */
+	public static final int E_TIMEOUT = 1;
+	
+	/**
+	 * Error code: Internal error
+	 */
+	public static final int E_INTERNAL = 2;
+	
+	/**
+	 * Callback executed on success
+	 * 
+	 * @param result optional result. Can be null
+	 */
 	void onSuccess(Variant result);
+	
+	/**
+	 * Callback executed on failure
+	 * 
+	 * @param code error code
+	 * @param message error message
+	 */
 	void onFailure(int code, String message);
 }

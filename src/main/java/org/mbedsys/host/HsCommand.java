@@ -16,7 +16,31 @@
 
 package org.mbedsys.host;
 
+import org.mbedsys.jvar.Variant;
+
+/**
+ * <p>
+ * This interface describes a cluster command object.
+ * </p>
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
 public interface HsCommand {
+	
+	/**
+	 * Get the command name
+	 * 
+	 * @return String object
+	 */
 	String getName();
 	
+	/**
+	 * Send command
+	 * 
+	 * @param arg command argument(s)
+	 * @param onResult Callback executed on result and/or error
+	 * @throws HsException on error
+	 */
+	void exec(Variant arg, HsResultHook onResult) throws HsException;
 }

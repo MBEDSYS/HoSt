@@ -17,12 +17,12 @@
 package org.mbedsys.util;
 
 /**
- * 
- * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
- * Copyright 2014 MbedSYS
  * <p>
  * This interface describes cancellable object.
  * </p>
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
  */
 public interface Cancellable {
 

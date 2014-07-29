@@ -17,13 +17,20 @@
 package org.mbedsys.util;
 
 /**
- * 
- * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
- * Copyright 2014 MbedSYS
  * <p>
  * This interface describes callback object.
  * </p>
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
  */
 public interface Callback<T, E extends Exception> {
+	
+	/**
+	 * Callback method
+	 * 
+	 * @param arg optional argument
+	 * @throws E on exception
+	 */
 	void exec(T arg) throws E;
 }

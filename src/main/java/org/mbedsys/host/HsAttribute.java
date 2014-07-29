@@ -18,13 +18,65 @@ package org.mbedsys.host;
 
 import org.mbedsys.jvar.Variant;
 
+/**
+ * <p>
+ * This interface describes a cluster attribute object.
+ * </p>
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
 public interface HsAttribute {
-	public static byte READ = 0x01;
-	public static byte WRITE = 0x02;
-	public static byte READWRITE = 0x03;
+	
+	/**
+	 * Flag indicating the attribute is readable
+	 */
+	public static final byte F_READ = 0x01;
+	
+	/**
+	 * Flag indicating the attribute is readable
+	 */
+	public static final byte F_WRITE = 0x02;
+	
+	/**
+	 * Combination of F_READ and F_WRITE flags
+	 */
+	public static final byte F_READWRITE = 0x03;
+	
+	/**
+	 * Get the attribute name
+	 * 
+	 * @return a String value
+	 */
 	String getName();
+	
+	/**
+	 * Get the current attribute value in cache
+	 * 
+	 * @return a Variant value
+	 */
 	Variant getValue();
+	
+	/**
+	 * Get the attribute capabilities
+	 * 
+	 * @return a byte value
+	 */
 	byte getCapabilities();
-	void read() throws HsException;
-	void write() throws HsException;
+	
+	/**
+	 * Send read command on this attribute
+	 * 
+	 * @param onResult Callback executed on result and/or error
+	 * @throws HsException on error
+	 */
+	void read(HsResultHook onResult) throws HsException;
+	
+	/**
+	 * Send write command on this attribute
+	 * 
+	 * @param onResult Callback executed on result and/or error
+	 * @throws HsException on error
+	 */
+	void write(HsResultHook onResult) throws HsException;
 }
