@@ -16,6 +16,14 @@
 
 package org.mbedsys.host;
 
+/**
+ * <p>
+ * This interface describes a device object.
+ * </p>
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
+ *         2014 MbedSYS
+ */
 public interface HsDevice {
 
 }
