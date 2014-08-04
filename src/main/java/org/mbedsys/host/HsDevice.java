@@ -25,5 +25,5 @@ package org.mbedsys.host;
  *         2014 MbedSYS
  */
 public interface HsDevice {
-
+	
 }

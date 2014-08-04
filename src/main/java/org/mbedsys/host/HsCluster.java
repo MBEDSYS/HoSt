@@ -67,7 +67,8 @@ public interface HsCluster {
 	 * 
 	 * @param name
 	 *            attribute name
-	 * @return the suitable attribute
+	 * @return the suitable attribute or null if they are no attribute available
+	 *         with the given name
 	 */
 	public HsAttribute getAttribute(String name);
 
