@@ -31,15 +31,13 @@ import org.mbedsys.jvar.Variant;
  */
 public interface HsCluster {
 	/**
-	 * Get cluster id
-	 * <p>
-	 * This ID is used to distinguish several cluster with the same type into
-	 * the same device
-	 * </p>
+	 * The cluster path is a relative path from the parent device with the following format:
+	 *            &lt;cluster type&gt;/&lt;instance id&gt;
 	 * 
-	 * @return id number
+	 * @return the relative path from the parent device with the following format:
+	 *            &lt;cluster type&gt;/&lt;instance id&gt;
 	 */
-	public int getId();
+	String getPath();
 
 	/**
 	 * Get cluster type name

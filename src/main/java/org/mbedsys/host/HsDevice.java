@@ -16,6 +16,9 @@
 
 package org.mbedsys.host;
 
+import java.util.Collection;
+import java.util.Set;
+
 /**
  * <p>
  * This interface describes a device object.
@@ -25,5 +28,40 @@ package org.mbedsys.host;
  *         2014 MbedSYS
  */
 public interface HsDevice {
-	
+	/**
+	 * The device path is compound from the device family following by the MAC
+	 * address or equivalent (&lt;family&gt;/&lt;MAC&gt;) and used to
+	 * distinguish a device. (Example of a ZigBee device path:
+	 * ZigBee/0123456789ABCDEF)
+	 * 
+	 * @return the device path using the following format:
+	 *         &lt;family&gt;/&lt;MAC&gt;
+	 */
+	String getPath();
+
+	/**
+	 * Get a cluster by the given relative path the following format:
+	 * &lt;cluster type&gt;/&lt;instance id&gt; (Example of a Switch cluster
+	 * path: Switch/0)
+	 * 
+	 * @param path
+	 *            relative path from this device with the following format:
+	 *            &lt;cluster type&gt;/&lt;instance id&gt;
+	 * @return a cluster object of null if there is no cluster with the given path
+	 */
+	HsCluster getCluster(String path);
+
+	/**
+	 * Get the cluster path list
+	 * 
+	 * @return a set of String
+	 */
+	public Set<String> clusterPathSet();
+
+	/**
+	 * Get all the clusters
+	 * 
+	 * @return a collection of attributes
+	 */
+	public Collection<HsCluster> clusters();
 }
