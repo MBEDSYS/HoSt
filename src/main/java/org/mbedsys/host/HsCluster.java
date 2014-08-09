@@ -37,14 +37,14 @@ public interface HsCluster {
 	 * @return the relative path from the parent device with the following format:
 	 *            &lt;cluster type&gt;/&lt;instance id&gt;
 	 */
-	String getPath();
+	public String getPath();
 
 	/**
 	 * Get cluster type name
 	 * 
 	 * @return type name as String
 	 */
-	public String getTypeName();
+	public HsType getType();
 
 	/**
 	 * Get the attribute name list
@@ -80,6 +80,6 @@ public interface HsCluster {
 	 * @throws HsException
 	 *             on error
 	 */
-	void exec(String command, Variant arg, HsResultHook onResult)
+	public void exec(String command, Variant arg, HsResultHook onResult)
 			throws HsException;
 }

@@ -1,0 +1,34 @@
+
+/**
+ * This interface defines a coordinator
+ */
+interface Coordinator {
+	/**
+	 * Pairing window time. Integer value within 0 and 255 seconds
+	 */
+	readonly attribute unsigned int pairingWindowTime;
+
+	/**
+	 * Pairing window state. Boolean value, true for open
+	 */
+	readonly attribute unsigned int pairingWindowState;
+
+	/**
+	 * Open pairing window
+	 * 
+	 * @param time Integer value within 0 and 255 seconds
+	 */
+	void openWindow(in unsigned int time);
+
+	/**
+	 * Open pairing window
+	 * 
+	 * @param time Integer value within 0 and 255 seconds
+	 */
+	void openWindowExt(in unsigned int time, in boolean softMode, in boolean keepOpen);
+
+	/**
+	 * Close pairing window
+	 */
+	void closeWindow();
+};

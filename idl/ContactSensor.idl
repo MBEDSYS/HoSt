@@ -1,0 +1,6 @@
+interface ContactSensor {
+	/**
+	 * 
+	 */
+	readonly attribute boolean contactInd;
+};

@@ -1,0 +1,25 @@
+include 
+
+interface Switch : ContactSensor {
+	/**
+	 * Switch on
+	 */
+	void on();
+	
+	/**
+	 * Switch off
+	 */
+	void off();
+	
+	/**
+	 * Toggle switch state
+	 */
+	void toggle();
+	
+	/**
+	 * Set the switch state
+	 * 
+	 * @param state true for on
+	 */
+	void setState(in boolean state);
+};

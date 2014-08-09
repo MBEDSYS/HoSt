@@ -1,0 +1,76 @@
+/**
+ *
+ */
+interface DeviceInfo extends SmartObject{
+
+	/**
+	 * vendor name (data type: string)
+	 */
+	readonly attribute string vendorName;
+
+	/**
+	 * vendor ID (data type: string)
+	 */
+	readonly attribute string vendorId;
+
+	/**
+	 * model name (data type: string)
+	 */
+	readonly attribute string modelName;
+
+	/**
+	 * model ID (data type: string)
+	 */
+	readonly attribute string modelId;
+
+	/**
+	 * protocol version (data type: string)
+	 */
+	readonly attribute string protocolVersion;
+
+	/**
+	 * stack version (data type: string)
+	 */
+	readonly attribute string stackVersion;
+
+	/**
+	 * hardware version (data type: string)
+	 */
+	readonly attribute string hardwareVersion;
+
+	/**
+	 * software version (data type: string)
+	 */
+	readonly attribute string softwareVersion;
+
+	/**
+	 * Power source (data type: octet)
+	 */
+	readonly attribute string powerSource;
+	
+	/**
+	 * PowerSource: Unknown
+	 */
+	const octet POWER_SOURCE_UNKNOW = 0x00;
+	
+	/**
+	 * PowerSource: Single phase alternating current.
+	 */
+	const octet POWER_SOURCE_AC_1P = 0x01;
+	
+	/**
+	 * PowerSource: Three phase alternating current.
+	 */
+	const octet POWER_SOURCE_AC_3P = 0x02;
+	
+	/**
+	 * PowerSource: Battery
+	 */
+	const octet POWER_SOURCE_BATTERY = 0x03;
+	
+	/**
+	 * PowerSource: Direct current.
+	 */
+	const octet POWER_SOURCE_DC = 0x04;
+
+}

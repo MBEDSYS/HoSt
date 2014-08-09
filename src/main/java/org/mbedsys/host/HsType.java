@@ -16,35 +16,43 @@
 
 package org.mbedsys.host;
 
-import org.mbedsys.jvar.Variant;
+import java.util.Set;
 
 /**
  * <p>
- * This interface describes a command object.
+ * This interface describes a cluster type.
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MbedSYS
  */
-public interface HsCommand {
-	
-	/**
-	 * Get the command name
-	 * 
-	 * @return a String value
-	 */
-	String getName();
+public interface HsType {
 
 	/**
-	 * Send command
+	 * Get parent type
 	 * 
-	 * @param arg
-	 *            command argument(s)
-	 * @param onResult
-	 *            Callback executed on result and/or error
-	 * @throws HsException
-	 *             on error
+	 * @return a reference to the parent type or null if it is a root type
 	 */
-	void exec(Variant arg, HsResultHook onResult)
-			throws HsException;
+	public HsType parent();
+
+	/**
+	 * Get cluster type name
+	 * 
+	 * @return type name as String
+	 */
+	public String getName();
+
+	/**
+	 * Get the attribute name list
+	 * 
+	 * @return a set of String
+	 */
+	public Set<String> attributeNameSet();
+
+	/**
+	 * Get the attribute name list
+	 * 
+	 * @return a set of String
+	 */
+	public Set<String> commandNameSet();
 }
