@@ -1,6 +1,6 @@
-include 
+#include <SwitchSensor.idl> 
 
-interface Switch : ContactSensor {
+interface Switch : SwitchSensor {
 	/**
 	 * Switch on
 	 */
