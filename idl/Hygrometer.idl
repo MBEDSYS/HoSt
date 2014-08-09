@@ -1,0 +1,13 @@
+/**
+ * This interface defines a hygrometer
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface Hygrometer {
+
+	/**
+	 * Measured value
+	 */
+	readonly attribute unsigned int MeasuredValue;
+}

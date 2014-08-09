@@ -1,0 +1,13 @@
+/**
+ * This interface defines a freeze sensor
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface FreezeSensor {
+
+	/**
+	 * Freeze indicator (data type: boolean)
+	 */
+	readonly attribute boolean freezeInd;
+}

@@ -1,0 +1,13 @@
+/**
+ * This interface defines a luminosity sensor
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface LuminositySensor {
+
+	/**
+	 * luminosity indicator
+	 */
+	readonly attribute  boolean luminosityInd;
+}
