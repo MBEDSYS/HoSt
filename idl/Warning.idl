@@ -9,17 +9,17 @@ interface Warning {
 	/**
 	 * Warning state
 	 */
-	readonly attribute int mode;
+	readonly attribute long mode;
 
 	/**
 	 * Warning idle
 	 */
-	const unsigned int IDLE = 0;
+	const unsigned long IDLE = 0;
 
 	/**
 	 * Warning in maintenance mode
 	 */
-	const unsigned int MAINTENANCE = -1;
+	const unsigned long MAINTENANCE = -1;
 
 	/**
 	 * Set the mode
@@ -32,6 +32,6 @@ interface Warning {
 	 *            specified time in seconds</li>
 	 *            </ul>
 	 */
-	void setMode(in int newState);
+	void setMode(in long newState);
 
 };

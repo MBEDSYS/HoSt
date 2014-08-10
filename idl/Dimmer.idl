@@ -9,5 +9,5 @@ public interface Dimmer {
 	/**
 	 * Level value in percent (data type: number between 0 and 100)
 	 */
-	attribute unsigned int level;
+	attribute unsigned long level;
 }

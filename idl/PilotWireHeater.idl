@@ -9,37 +9,37 @@ interface PilotWireHeater {
 	/**
 	 * Warning state
 	 */
-	readonly attribute unsigned int mode;
+	readonly attribute unsigned long mode;
 
 	/**
 	 * Comfort mode (0x01)
 	 */
-	const unsigned int COMFORT = 1;
+	const unsigned long COMFORT = 1;
 
 	/**
 	 * Economy mode (0x02)
 	 */
-	const unsigned int ECONOMY = 2;
+	const unsigned long ECONOMY = 2;
 
 	/**
 	 * Anti freeze mode (0x03)
 	 */
-	const unsigned int ANTI_FREEZE = 3;
+	const unsigned long ANTI_FREEZE = 3;
 
 	/**
 	 * Off mode (0x04)
 	 */
-	const unsigned int OFF = 4;
+	const unsigned long OFF = 4;
 
 	/**
 	 * Comfort -1°C mode (0x05)
 	 */
-	const unsigned int COMFORT_M1 = 5;
+	const unsigned long COMFORT_M1 = 5;
 
 	/**
 	 * Comfort -2°C mode (0x06)
 	 */
-	const unsigned int COMFORT_M2 = 6;
+	const unsigned long COMFORT_M2 = 6;
 
 	/**
 	 * Set the heater mode
@@ -54,5 +54,5 @@ interface PilotWireHeater {
 	 *            <li>COMFORT_M2 (0x06):</li>
 	 *            </ul>
 	 */
-	void setMode(in unsigned int newState);
+	void setMode(in unsigned long newState);
 }

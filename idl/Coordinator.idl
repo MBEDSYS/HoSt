@@ -8,7 +8,7 @@ interface Coordinator {
 	/**
 	 * Pairing window time. Integer value within 0 and 255 seconds
 	 */
-	readonly attribute unsigned int pairingWindowTime;
+	readonly attribute unsigned long pairingWindowTime;
 
 	/**
 	 * Pairing window state. Boolean value, true for open
@@ -20,17 +20,22 @@ interface Coordinator {
 	 * 
 	 * @param time Integer value within 0 and 255 seconds
 	 */
-	void openWindow(in unsigned int time);
+	void openWindow(in unsigned long time);
 
 	/**
 	 * Open pairing window
 	 * 
 	 * @param time Integer value within 0 and 255 seconds
 	 */
-	void openWindowExt(in unsigned int time, in boolean softMode, in boolean keepOpen);
+	void openWindowExt(in unsigned long time, in boolean softMode, in boolean keepOpen);
 
 	/**
 	 * Close pairing window
 	 */
 	void closeWindow();
+
+	/**
+	 * Reset network
+	 */
+	void resetNetwork();
 };

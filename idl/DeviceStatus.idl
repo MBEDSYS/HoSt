@@ -10,13 +10,13 @@ interface DeviceStatus {
 	 * Time in second between 1970-01-01 00:00:00 of the last
 	 * transmission from the device
 	 */
-	readonly attribute unsigned long lastActivityTime;
+	readonly attribute unsigned long long lastActivityTime;
 
 	/**
 	 * Inactivity time between the last device activity in
 	 * minutes
 	 */
-	readonly attribute unsigned int idleTime;
+	readonly attribute unsigned long idleTime;
 
 	/**
 	 * Device offline indicator

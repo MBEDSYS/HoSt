@@ -9,5 +9,5 @@ interface Thermometer {
 	/**
 	 * Measured value in hundredth of celsius degree return the measured value in hundredth of celsius degree
 	 */
-	readonly attribute int measuredValue;
+	readonly attribute long measuredValue;
 };

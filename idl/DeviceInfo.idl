@@ -49,31 +49,31 @@ interface DeviceInfo {
 	/**
 	 * Power source
 	 */
-	readonly attribute unsigned int powerSource;
+	readonly attribute unsigned long powerSource;
 	
 	/**
 	 * PowerSource: Unknown
 	 */
-	const octet POWER_SOURCE_UNKNOW = 0x00;
+	const unsigned long POWER_SOURCE_UNKNOW = 0x00;
 	
 	/**
 	 * PowerSource: Single phase alternating current.
 	 */
-	const octet POWER_SOURCE_AC_1P = 0x01;
+	const unsigned long POWER_SOURCE_AC_1P = 0x01;
 	
 	/**
 	 * PowerSource: Three phase alternating current.
 	 */
-	const octet POWER_SOURCE_AC_3P = 0x02;
+	const unsigned long POWER_SOURCE_AC_3P = 0x02;
 	
 	/**
 	 * PowerSource: Battery
 	 */
-	const octet POWER_SOURCE_BATTERY = 0x03;
+	const unsigned long POWER_SOURCE_BATTERY = 0x03;
 	
 	/**
 	 * PowerSource: Direct current.
 	 */
-	const octet POWER_SOURCE_DC = 0x04;
+	const unsigned long POWER_SOURCE_DC = 0x04;
 
 };

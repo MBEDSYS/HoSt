@@ -54,17 +54,17 @@ interface Platform {
 	/**
 	 * version major part
 	 */
-	readonly attribute unsigned int versionMajor;
+	readonly attribute unsigned long versionMajor;
 
 	/**
 	 * version minor part
 	 */
-	readonly attribute unsigned int versionMinor;
+	readonly attribute unsigned long versionMinor;
 
 	/**
 	 * version patch part
 	 */
-	readonly attribute unsigned int versionPatch;
+	readonly attribute unsigned long versionPatch;
 
 	/**
 	 * version

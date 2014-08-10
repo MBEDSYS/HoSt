@@ -9,16 +9,16 @@ interface SimpleMeter {
 	/**
 	 * Current summered delivered consummation
 	 */
-	readonly attribute unsigned int currSummDelivered;
+	readonly attribute unsigned long currSummDelivered;
 
 	/**
 	 * Current summered received consummation
 	 */
-	readonly attribute unsigned int currSummReceived;
+	readonly attribute unsigned long currSummReceived;
 
 	/**
 	 * Power instant demand
 	 */
-	readonly attribute unsigned int instDemand;
+	readonly attribute unsigned long instDemand;
 
 }

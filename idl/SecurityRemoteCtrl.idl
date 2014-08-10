@@ -11,70 +11,70 @@ interface SecurityRemoteCtrl : SecuritySensor {
 	/**
 	 * Alarm mode
 	 */
-	readonly attribute unsigned int alarmMode;
+	readonly attribute unsigned long alarmMode;
 
 	/**
 	 * Scenario number
 	 */
-	readonly attribute unsigned int scenarioNum;
+	readonly attribute unsigned long scenarioNum;
 
 	/**
 	 * User id
 	 */
-	readonly attribute unsigned int userId;
+	readonly attribute unsigned long userId;
 
 	/**
 	 * Action
 	 */
-	readonly attribute unsigned int action;
+	readonly attribute unsigned long action;
 
 	/**
 	 * Alarm disarmed (0x01)
 	 */
-	const unsigned int MODE_DISARMED	= 0x01;
+	const unsigned long MODE_DISARMED	= 0x01;
 
 	/**
 	 * Alarm armed (0x02)
 	 */
-	const unsigned int MODE_ARMED		= 0x02;
+	const unsigned long MODE_ARMED		= 0x02;
 
 	/**
 	 * Alarm in home mode (0x04)
 	 */
-	const unsigned int MODE_HOME		= 0x04;
+	const unsigned long MODE_HOME		= 0x04;
 
 	/**
 	 * Panic mode (0x08)
 	 */
-	const unsigned int MODE_PANIC		= 0x08;
+	const unsigned long MODE_PANIC		= 0x08;
 	
 	/**
 	 * Alarm active (siren running, 0x10)
 	 */
-	const unsigned int MODE_ACTIVE		= 0x10;
+	const unsigned long MODE_ACTIVE		= 0x10;
 	
 	/**
 	 * Action: scenario (0)
 	 */
-	const unsigned int ACTION_SCENARIO = 0;
+	const unsigned long ACTION_SCENARIO = 0;
 	
 	/**
 	 * Action: user code added (1)
 	 */
-	const unsigned int ACTION_USER_ADD_CODE = 1;
+	const unsigned long ACTION_USER_ADD_CODE = 1;
 	
 	/**
 	 * Action: user badge added (2)
 	 */
-	const unsigned int ACTION_USER_ADD_BADGE = 2;
+	const unsigned long ACTION_USER_ADD_BADGE = 2;
 	
 	/**
 	 * Action: user deleted (3)
 	 */
-	const unsigned int ACTION_USER_DELETED = 3;
+	const unsigned long ACTION_USER_DELETED = 3;
 
 	/**
 	 * Update the alarm mode
 	 */
-	void setAlarmMode(in unsigned int mode);
+	void setAlarmMode(in unsigned long mode);
 }
