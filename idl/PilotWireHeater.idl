@@ -54,5 +54,5 @@ interface PilotWireHeater {
 	 *            <li>COMFORT_M2 (0x06):</li>
 	 *            </ul>
 	 */
-	public int setMode(in unsigned int newState);
+	void setMode(in unsigned int newState);
 }

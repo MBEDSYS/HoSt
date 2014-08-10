@@ -4,7 +4,6 @@
  * @author <a href="mailto:emericv@mbedsys.fr">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
  */
-
 interface SwitchSensor {
 	/**
 	 * Contact indicator (data type: boolean)

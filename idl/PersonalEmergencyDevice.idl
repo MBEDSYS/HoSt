@@ -1,10 +1,12 @@
+#include <SecuritySensor.idl> 
+
 /**
  * This interface defines a personal emergency device sensor
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
  */
-interface PersonalEmergencyDevice {
+interface PersonalEmergencyDevice : SecuritySensor {
 
 	/**
 	 * Fall indicator

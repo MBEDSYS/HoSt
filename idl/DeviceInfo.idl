@@ -7,49 +7,49 @@
 interface DeviceInfo {
 
 	/**
-	 * vendor name (data type: string)
+	 * Vendor name
 	 */
 	readonly attribute string vendorName;
 
 	/**
-	 * vendor ID (data type: string)
+	 * Vendor ID
 	 */
 	readonly attribute string vendorId;
 
 	/**
-	 * model name (data type: string)
+	 * Model name
 	 */
 	readonly attribute string modelName;
 
 	/**
-	 * model ID (data type: string)
+	 * Model ID
 	 */
 	readonly attribute string modelId;
 
 	/**
-	 * protocol version (data type: string)
+	 * Protocol version
 	 */
 	readonly attribute string protocolVersion;
 
 	/**
-	 * stack version (data type: string)
+	 * Stack version
 	 */
 	readonly attribute string stackVersion;
 
 	/**
-	 * hardware version (data type: string)
+	 * Hardware version
 	 */
 	readonly attribute string hardwareVersion;
 
 	/**
-	 * software version (data type: string)
+	 * Software version
 	 */
 	readonly attribute string softwareVersion;
 
 	/**
-	 * Power source (data type: octet)
+	 * Power source
 	 */
-	readonly attribute string powerSource;
+	readonly attribute unsigned int powerSource;
 	
 	/**
 	 * PowerSource: Unknown

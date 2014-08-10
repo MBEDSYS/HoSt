@@ -1,10 +1,11 @@
+#include <SecuritySensor.idl> 
+
 /**
  * 
  * 
  * @author <a href="mailto:emericv@mbedsys.fr">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
  */
-
-interface DoorLock {
+interface DoorLock : SecuritySensor {
 	
 }

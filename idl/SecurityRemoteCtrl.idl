@@ -1,10 +1,12 @@
+#include <SecuritySensor.idl> 
+
 /**
  * This interface defines a security remote control
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
  */
-interface SecurityRemoteCtrl {
+interface SecurityRemoteCtrl : SecuritySensor {
 
 	/**
 	 * Alarm mode
@@ -74,5 +76,5 @@ interface SecurityRemoteCtrl {
 	/**
 	 * Update the alarm mode
 	 */
-	public void setAlarmMode(in unsigned int mode);
+	void setAlarmMode(in unsigned int mode);
 }

@@ -1,10 +1,12 @@
+#include <SecuritySensor.idl> 
+
 /**
  * This interface defines a motion sensor
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
  */
-interface MotionSensor {
+interface MotionSensor : SecuritySensor {
 
 	/**
 	 * intrusion indicator

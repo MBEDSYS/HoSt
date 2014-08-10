@@ -13,7 +13,7 @@ interface Coordinator {
 	/**
 	 * Pairing window state. Boolean value, true for open
 	 */
-	readonly attribute unsigned int pairingWindowState;
+	readonly attribute boolean pairingWindowState;
 
 	/**
 	 * Open pairing window
