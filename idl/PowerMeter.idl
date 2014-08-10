@@ -1,0 +1,24 @@
+/**
+ * This interface defines a simple meter.
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface SimpleMeter {
+
+	/**
+	 * Current summered delivered consummation
+	 */
+	readonly attribute unsigned int currSummDelivered;
+
+	/**
+	 * Current summered received consummation
+	 */
+	readonly attribute unsigned int currSummReceived;
+
+	/**
+	 * Power instant demand
+	 */
+	readonly attribute unsigned int instDemand;
+
+}

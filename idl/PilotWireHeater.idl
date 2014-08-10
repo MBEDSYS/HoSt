@@ -1,0 +1,58 @@
+/**
+ * This interface defines a heater controller by pilot wire
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface PilotWireHeater {
+
+	/**
+	 * Warning state
+	 */
+	readonly attribute unsigned int mode;
+
+	/**
+	 * Comfort mode (0x01)
+	 */
+	const unsigned int COMFORT = 1;
+
+	/**
+	 * Economy mode (0x02)
+	 */
+	const unsigned int ECONOMY = 2;
+
+	/**
+	 * Anti freeze mode (0x03)
+	 */
+	const unsigned int ANTI_FREEZE = 3;
+
+	/**
+	 * Off mode (0x04)
+	 */
+	const unsigned int OFF = 4;
+
+	/**
+	 * Comfort -1°C mode (0x05)
+	 */
+	const unsigned int COMFORT_M1 = 5;
+
+	/**
+	 * Comfort -2°C mode (0x06)
+	 */
+	const unsigned int COMFORT_M2 = 6;
+
+	/**
+	 * Set the heater mode
+	 * 
+	 * @param newState
+	 *            <ul>
+	 *            <li>COMFORT (0x01):</li>
+	 *            <li>ECONOMY (0x02):</li>
+	 *            <li>ANTI_FREEZE (0x03):</li>
+	 *            <li>OFF (4):</li>
+	 *            <li>COMFORT_M1 (0x05):</li>
+	 *            <li>COMFORT_M2 (0x06):</li>
+	 *            </ul>
+	 */
+	public int setMode(in unsigned int newState);
+}

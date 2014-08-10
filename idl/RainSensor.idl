@@ -1,0 +1,13 @@
+/**
+ * This interface defines a rain sensor
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface RainSensor {
+
+	/**
+	 * Freeze indicator
+	 */
+	readonly attribute boolean rainInd;
+};

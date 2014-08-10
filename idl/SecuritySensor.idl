@@ -1,0 +1,13 @@
+/**
+ * This interface defines a security sensor
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface SecuritySensor {
+
+	/**
+	 * Sensor integrity indicator
+	 */
+	readonly attribute boolean tamper;
+}

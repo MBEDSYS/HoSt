@@ -1,0 +1,74 @@
+/**
+ * This interface defines a SmartObject containing the platform information
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface Platform {
+
+	/**
+	 * the vendor name
+	 */
+	readonly attribute string vendorName;
+
+	/**
+	 * the vendor ID
+	 */
+	readonly attribute string vendorId;
+
+	/**
+	 * the model name
+	 */
+	readonly attribute string modelName;
+
+	/**
+	 * the model ID
+	 */
+	readonly attribute string modelId;
+
+	/**
+	 * the serial number
+	 */
+	readonly attribute string serial;
+
+	/**
+	 * the hardware vendor name
+	 */
+	readonly attribute string hwVendorName;
+
+	/**
+	 * the hardware vendor ID
+	 */
+	readonly attribute string hwVendorId;
+
+	/**
+	 * the hardware model name
+	 */
+	readonly attribute string hwModelName;
+
+	/**
+	 * the hardware model ID
+	 */
+	readonly attribute string hwModelId;
+
+	/**
+	 * version major part
+	 */
+	readonly attribute unsigned int versionMajor;
+
+	/**
+	 * version minor part
+	 */
+	readonly attribute unsigned int versionMinor;
+
+	/**
+	 * version patch part
+	 */
+	readonly attribute unsigned int versionPatch;
+
+	/**
+	 * version
+	 */
+	readonly attribute string versionstring;
+
+};

@@ -1,0 +1,13 @@
+/**
+ * This interface defines a generic sensor
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface PowerSupply {
+
+	/**
+	 * Low battery indicator
+	 */
+	readonly attribute boolean lowBattery;
+}

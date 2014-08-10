@@ -1,0 +1,37 @@
+/**
+ * This interface defines a warning device
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface Warning {
+
+	/**
+	 * Warning state
+	 */
+	readonly attribute int mode;
+
+	/**
+	 * Warning idle
+	 */
+	const unsigned int IDLE = 0;
+
+	/**
+	 * Warning in maintenance mode
+	 */
+	const unsigned int MAINTENANCE = -1;
+
+	/**
+	 * Set the mode
+	 * 
+	 * @param newState
+	 *            <ul>
+	 *            <li>IDLE: Stop the warning</li>
+	 *            <li>MAINTENANCE: Set warning in maintenance mode</li>
+	 *            <li>Other value greater than zero: Active the warning for a
+	 *            specified time in seconds</li>
+	 *            </ul>
+	 */
+	void setMode(in int newState);
+
+};

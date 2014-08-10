@@ -1,0 +1,18 @@
+/**
+ * This interface defines a personal emergency device sensor
+ * 
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
+ * Copyright 2014 MbedSYS
+ */
+interface VibrationMovementSensor {
+
+	/**
+	 * Movement indicator
+	 */
+	readonly attribute boolean movementInd;
+
+	/**
+	 * Vibration indicator
+	 */
+	readonly attribute boolean vibration;
+};
