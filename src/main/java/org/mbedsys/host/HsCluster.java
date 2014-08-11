@@ -40,11 +40,11 @@ public interface HsCluster {
 	public String getPath();
 
 	/**
-	 * Get cluster type name
+	 * Get cluster meta model
 	 * 
 	 * @return type name as String
 	 */
-	public HsType getType();
+	public HsMetaCluster metaCluster();
 
 	/**
 	 * Get the attribute name list

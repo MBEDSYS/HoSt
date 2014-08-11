@@ -48,21 +48,14 @@ public interface HsAttribute {
 	 * 
 	 * @return a String value
 	 */
-	String getName();
+	public HsMetaAttribute metaAttribute();
 	
 	/**
 	 * Get the current attribute value in cache
 	 * 
 	 * @return a Variant value
 	 */
-	Variant getValue();
-	
-	/**
-	 * Get the attribute capabilities
-	 * 
-	 * @return a byte value
-	 */
-	byte getCapabilities();
+	public Variant getValue();
 	
 	/**
 	 * Send read command on this attribute
@@ -70,7 +63,7 @@ public interface HsAttribute {
 	 * @param onResult Callback executed on result and/or error
 	 * @throws HsException on error
 	 */
-	void read(HsResultHook onResult) throws HsException;
+	public void read(HsResultHook onResult) throws HsException;
 	
 	/**
 	 * Send write command on this attribute
@@ -78,5 +71,5 @@ public interface HsAttribute {
 	 * @param onResult Callback executed on result and/or error
 	 * @throws HsException on error
 	 */
-	void write(HsResultHook onResult) throws HsException;
+	public void write(HsResultHook onResult) throws HsException;
 }

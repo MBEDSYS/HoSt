@@ -16,43 +16,22 @@
 
 package org.mbedsys.host;
 
-import java.util.Set;
+
 
 /**
  * <p>
- * This interface describes a cluster type.
+ * This interface describes a command meta model
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MbedSYS
  */
-public interface HsType {
+public interface HsMetaCommand {
 
 	/**
-	 * Get parent type
-	 * 
-	 * @return a reference to the parent type or null if it is a root type
-	 */
-	public HsType parent();
-
-	/**
-	 * Get cluster type name
+	 * Get command type name
 	 * 
 	 * @return type name as String
 	 */
 	public String getName();
-
-	/**
-	 * Get the attribute name list
-	 * 
-	 * @return a set of String
-	 */
-	public Set<String> attributeNameSet();
-
-	/**
-	 * Get the attribute name list
-	 * 
-	 * @return a set of String
-	 */
-	public Set<String> commandNameSet();
 }
