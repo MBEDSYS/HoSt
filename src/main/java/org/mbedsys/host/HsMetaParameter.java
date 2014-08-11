@@ -16,31 +16,44 @@
 
 package org.mbedsys.host;
 
-import java.util.Collection;
-
+import org.mbedsys.jvar.Variant.Type;
 
 
 /**
  * <p>
- * This interface describes a command meta model
+ * This interface describes a command parameter meta model
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MbedSYS
  */
-public interface HsMetaCommand {
+public interface HsMetaParameter {
+	
+	/**
+	 * Get value type
+	 * 
+	 * @return Variant.Type
+	 */
+	public Type type();
 
 	/**
-	 * Get command type name
+	 * Get cluster type name
 	 * 
 	 * @return type name as String
 	 */
 	public String name();
-
+	
 	/**
-	 * Get the command list
+	 * Get if it is an input parameter
 	 * 
-	 * @return a set of String
+	 * @return a boolean value
 	 */
-	public Collection<HsMetaParameter> parameters();
+	boolean isIn();
+	
+	/**
+	 * Get if it is an output parameter
+	 * 
+	 * @return a boolean value
+	 */
+	boolean isOut();
 }
