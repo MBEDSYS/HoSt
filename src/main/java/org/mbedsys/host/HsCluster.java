@@ -17,9 +17,8 @@
 package org.mbedsys.host;
 
 import java.util.Collection;
-import java.util.Set;
 
-import org.mbedsys.jvar.Variant;
+import org.mbedsys.jvar.VariantMap;
 
 /**
  * <p>
@@ -47,13 +46,6 @@ public interface HsCluster {
 	public HsMetaCluster metaCluster();
 
 	/**
-	 * Get the attribute name list
-	 * 
-	 * @return a set of String
-	 */
-	public Set<String> attributeNameSet();
-
-	/**
 	 * Get all the attributes
 	 * 
 	 * @return a collection of attributes
@@ -73,13 +65,13 @@ public interface HsCluster {
 	/**
 	 * Send command
 	 * 
-	 * @param arg
-	 *            command argument(s)
+	 * @param arguments
+	 *            command argument(s), can be null if there is no argument
 	 * @param onResult
 	 *            Callback executed on result and/or error
 	 * @throws HsException
 	 *             on error
 	 */
-	public void exec(String command, Variant arg, HsResultHook onResult)
+	public void exec(String command, VariantMap arguments, HsResultHook onResult)
 			throws HsException;
 }

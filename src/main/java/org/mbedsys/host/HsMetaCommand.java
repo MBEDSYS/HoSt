@@ -18,6 +18,8 @@ package org.mbedsys.host;
 
 import java.util.Collection;
 
+import org.mbedsys.jvar.Variant.Type;
+
 
 
 /**
@@ -43,4 +45,11 @@ public interface HsMetaCommand {
 	 * @return a set of String
 	 */
 	public Collection<HsMetaParameter> parameters();
+	
+	/**
+	 * Get return type
+	 * 
+	 * @return Variant.Type, {@link Type#NULL} means that the return type is void
+	 */
+	public Type returnType();
 }

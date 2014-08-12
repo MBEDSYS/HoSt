@@ -29,24 +29,9 @@ import org.mbedsys.jvar.Variant;
 public interface HsAttribute {
 	
 	/**
-	 * Flag indicating the attribute is readable
-	 */
-	public static final byte F_READ = 0x01;
-	
-	/**
-	 * Flag indicating the attribute is readable
-	 */
-	public static final byte F_WRITE = 0x02;
-	
-	/**
-	 * Combination of F_READ and F_WRITE flags
-	 */
-	public static final byte F_READWRITE = 0x03;
-	
-	/**
-	 * Get the attribute name
+	 * Get the attribute meta model
 	 * 
-	 * @return a String value
+	 * @return a HsMetaAttribute
 	 */
 	public HsMetaAttribute metaAttribute();
 	

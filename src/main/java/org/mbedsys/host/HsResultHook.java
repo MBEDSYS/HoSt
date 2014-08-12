@@ -17,6 +17,7 @@
 package org.mbedsys.host;
 
 import org.mbedsys.jvar.Variant;
+import org.mbedsys.jvar.VariantMap;
 
 /**
  * <p>
@@ -42,8 +43,9 @@ public interface HsResultHook {
 	 * Callback executed on success
 	 * 
 	 * @param result optional result. Can be null
+	 * @param parameters only applicable for command with out or inout parameters. Can be null
 	 */
-	void onSuccess(Variant result);
+	void onSuccess(Variant result, VariantMap parameters);
 	
 	/**
 	 * Callback executed on failure
