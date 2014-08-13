@@ -31,11 +31,11 @@ import org.mbedsys.jvar.VariantMap;
 public interface HsMetaCluster {
 
 	/**
-	 * Get parent type
+	 * Get parent meta clusters
 	 * 
-	 * @return a reference to the parent type or null if it is a top level node
+	 * @return a reference to the parents
 	 */
-	public HsMetaCluster parent();
+	public Collection<HsMetaCluster> parents();
 
 	/**
 	 * Get cluster type name
