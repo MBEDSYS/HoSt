@@ -17,41 +17,21 @@
 package org.mbedsys.host;
 
 import org.mbedsys.jvar.Variant;
-import org.mbedsys.jvar.VariantMap;
 
 /**
  * <p>
- * This interface describes callback executed on command/read/write result.
+ * This interface describes hook for getValue (useful for computed valued attribute)
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
  */
-public interface HsResultHook {
+public interface HsHookGetValue {
 	
 	/**
-	 * Error code: Command timeout
-	 */
-	public static final int E_TIMEOUT = 1;
-	
-	/**
-	 * Error code: Internal error
-	 */
-	public static final int E_INTERNAL = 2;
-	
-	/**
-	 * Callback executed on success
+	 * This callback must be implemented by the stack to overload standard getValue (useful for computed valued attribute)
 	 * 
-	 * @param result optional result. Can be null
-	 * @param parameters only applicable for command with out or inout parameters. Can be null
+	 * @return the computed attribute value
 	 */
-	void onSuccess(Variant result, VariantMap parameters);
-	
-	/**
-	 * Callback executed on failure
-	 * 
-	 * @param code error code
-	 * @param message error message
-	 */
-	void onFailure(int code, String message);
+	Variant onGet();
 }

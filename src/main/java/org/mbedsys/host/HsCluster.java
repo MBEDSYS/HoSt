@@ -71,7 +71,9 @@ public interface HsCluster {
 	 *            Callback executed on result and/or error
 	 * @throws HsException
 	 *             on error
+	 * @throws HsClusterPermission
+	 *             if this operation is not permitted
 	 */
-	public void exec(String command, VariantMap arguments, HsResultHook onResult)
+	public void exec(String command, VariantMap arguments, HsHookResult onResult)
 			throws HsException;
 }

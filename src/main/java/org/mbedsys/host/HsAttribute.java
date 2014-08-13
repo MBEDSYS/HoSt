@@ -23,38 +23,46 @@ import org.mbedsys.jvar.Variant;
  * This interface describes a cluster attribute object.
  * </p>
  * 
- * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
- * Copyright 2014 MbedSYS
+ * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
+ *         2014 MbedSYS
  */
 public interface HsAttribute {
-	
+
 	/**
 	 * Get the attribute meta model
 	 * 
 	 * @return a HsMetaAttribute
 	 */
 	public HsMetaAttribute metaAttribute();
-	
+
 	/**
 	 * Get the current attribute value in cache
 	 * 
 	 * @return a Variant value
 	 */
 	public Variant getValue();
-	
+
 	/**
 	 * Send read command on this attribute
 	 * 
-	 * @param onResult Callback executed on result and/or error
-	 * @throws HsException on error
+	 * @param onResult
+	 *            Callback executed on result and/or error
+	 * @throws HsException
+	 *             on error
+	 * @throws HsClusterPermission
+	 *             if this operation is not permitted
 	 */
-	public void read(HsResultHook onResult) throws HsException;
-	
+	public void read(HsHookResult onResult) throws HsException;
+
 	/**
 	 * Send write command on this attribute
 	 * 
-	 * @param onResult Callback executed on result and/or error
-	 * @throws HsException on error
+	 * @param onResult
+	 *            Callback executed on result and/or error
+	 * @throws HsException
+	 *             on error
+	 * @throws HsClusterPermission
+	 *             if this operation is not permitted
 	 */
-	public void write(HsResultHook onResult) throws HsException;
+	public void write(HsHookResult onResult) throws HsException;
 }
