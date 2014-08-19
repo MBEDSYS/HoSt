@@ -77,4 +77,4 @@ interface SecurityRemoteCtrl : SecuritySensor {
 	 * Update the alarm mode
 	 */
 	void setAlarmMode(in unsigned long mode);
-}
+};

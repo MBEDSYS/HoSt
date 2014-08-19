@@ -10,4 +10,4 @@ interface PowerSupply {
 	 * Low battery indicator
 	 */
 	readonly attribute boolean lowBattery;
-}
+};

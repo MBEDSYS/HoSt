@@ -12,4 +12,4 @@ interface StandardCtrlIndEquipment : SecuritySensor {
 	 * System alarm state
 	 */
 	readonly attribute boolean systemAlarm;
-}
+};

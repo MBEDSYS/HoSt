@@ -10,4 +10,4 @@ interface Hygrometer {
 	 * Measured value
 	 */
 	readonly attribute unsigned long measuredValue;
-}
+};

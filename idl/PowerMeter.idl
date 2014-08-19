@@ -21,4 +21,4 @@ interface PowerMeter {
 	 */
 	readonly attribute unsigned long instDemand;
 
-}
+};

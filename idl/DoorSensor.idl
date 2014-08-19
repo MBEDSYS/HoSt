@@ -12,4 +12,4 @@ interface DoorSensor : SecuritySensor {
 	 * Portal open indicator
 	 */
 	readonly attribute boolean portalOpen;
-}
+};

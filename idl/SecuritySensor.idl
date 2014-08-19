@@ -10,4 +10,4 @@ interface SecuritySensor {
 	 * Sensor integrity indicator
 	 */
 	readonly attribute boolean tamper;
-}
+};

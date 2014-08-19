@@ -10,4 +10,4 @@ interface FreezeSensor {
 	 * Freeze indicator (data type: boolean)
 	 */
 	readonly attribute boolean freezeInd;
-}
+};

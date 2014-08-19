@@ -55,4 +55,4 @@ interface PilotWireHeater {
 	 *            </ul>
 	 */
 	void setMode(in unsigned long newState);
-}
+};

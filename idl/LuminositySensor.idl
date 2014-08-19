@@ -10,4 +10,4 @@ interface LuminositySensor {
 	 * luminosity indicator
 	 */
 	readonly attribute  boolean luminosityInd;
-}
+};

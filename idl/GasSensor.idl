@@ -15,4 +15,4 @@ interface GasSensor {
 	 * Carbon dioxide indicator
 	 */
 	readonly attribute  boolean carbonDioxideInd;
-}
+};

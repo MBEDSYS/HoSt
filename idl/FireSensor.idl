@@ -10,4 +10,4 @@ interface FireSensor {
 	 * Fire indicator
 	 */
 	readonly attribute boolean fireInd;
-}
+};

@@ -17,4 +17,4 @@ interface PersonalEmergencyDevice : SecuritySensor {
 	 * Emergency indicator
 	 */
 	readonly attribute  boolean emergency;
-}
+};

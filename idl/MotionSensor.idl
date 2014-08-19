@@ -17,4 +17,4 @@ interface MotionSensor : SecuritySensor {
 	 * presence indicator
 	 */
 	readonly attribute  boolean presenceInd;
-}
+};

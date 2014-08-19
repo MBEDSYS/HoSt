@@ -12,4 +12,4 @@ interface FailureSensor : SecuritySensor {
 	 * Failure indicator
 	 */
 	readonly attribute boolean failureInd;
-}
+};
