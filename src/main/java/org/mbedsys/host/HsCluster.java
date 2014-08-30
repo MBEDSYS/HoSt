@@ -44,6 +44,14 @@ public interface HsCluster {
 	 * @return type name as String
 	 */
 	public HsMetaCluster metaCluster();
+	
+	/**
+	 * Test if this cluster is an instance of given type
+	 * 
+	 * @param type given type
+	 * @return true if the test succeed
+	 */
+	public boolean instanceOf(HsMetaCluster type);
 
 	/**
 	 * Get all the attributes
