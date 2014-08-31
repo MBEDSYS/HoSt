@@ -37,7 +37,13 @@ public interface HsMetaCluster {
 	 */
 	public Collection<HsMetaCluster> parents();
 	
-	public boolean isAssignableFrom(HsMetaCluster type);
+	/**
+	 * 
+	 * 
+	 * @param metaCluster
+	 * @return
+	 */
+	public boolean isAssignableFrom(HsMetaCluster metaCluster);
 
 	/**
 	 * Get cluster type name
