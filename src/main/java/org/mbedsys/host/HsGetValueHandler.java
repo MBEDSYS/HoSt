@@ -26,7 +26,7 @@ import org.mbedsys.jvar.Variant;
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
  */
-public interface HsHookGetValue {
+public interface HsGetValueHandler {
 	
 	/**
 	 * This callback must be implemented by the stack to overload standard getValue (useful for computed valued attribute)

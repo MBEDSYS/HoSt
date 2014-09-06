@@ -52,7 +52,7 @@ public interface HsAttribute {
 	 * @throws HsClusterPermission
 	 *             if this operation is not permitted
 	 */
-	public void read(HsHookResult onResult) throws HsException;
+	public void read(HsResultHandler onResult) throws HsException;
 
 	/**
 	 * Send write command on this attribute
@@ -64,5 +64,5 @@ public interface HsAttribute {
 	 * @throws HsClusterPermission
 	 *             if this operation is not permitted
 	 */
-	public void write(HsHookResult onResult) throws HsException;
+	public void write(HsResultHandler onResult) throws HsException;
 }

@@ -17,41 +17,23 @@
 package org.mbedsys.host;
 
 import org.mbedsys.jvar.Variant;
-import org.mbedsys.jvar.VariantMap;
 
 /**
  * <p>
- * This interface describes callback executed on command/read/write result.
+ * This interface describes callback executed on command/read/write request.
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
  */
-public interface HsHookResult {
+public interface HsRequestHandler {
 	
 	/**
-	 * Error code: Command timeout
-	 */
-	public static final int E_TIMEOUT = 1;
-	
-	/**
-	 * Error code: Internal error
-	 */
-	public static final int E_INTERNAL = 2;
-	
-	/**
-	 * Callback executed on success
+	 * This callback must be implemented by the stack to overload read/write/command request
 	 * 
-	 * @param result optional result. Can be null
-	 * @param parameters only applicable for command with out or inout parameters. Can be null
+	 * @param arguments
+	 * @param onResult
+	 * @throws HsException on error
 	 */
-	void onSuccess(Variant result, VariantMap parameters);
-	
-	/**
-	 * Callback executed on failure
-	 * 
-	 * @param code error code
-	 * @param message error message
-	 */
-	void onFailure(int code, String message);
+	void onExec(Variant arguments, HsResultHandler onResult) throws HsException;
 }

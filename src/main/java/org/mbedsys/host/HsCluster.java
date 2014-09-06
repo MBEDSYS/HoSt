@@ -82,6 +82,6 @@ public interface HsCluster {
 	 * @throws HsClusterPermission
 	 *             if this operation is not permitted
 	 */
-	public void exec(String command, VariantMap arguments, HsHookResult onResult)
+	public void exec(String command, VariantMap arguments, HsResultHandler onResult)
 			throws HsException;
 }

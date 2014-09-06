@@ -15,7 +15,7 @@ public interface HsAttributeInternal {
 	 * 
 	 * @param hook
 	 */
-	public void setGetValueHook(HsHookRequest hook);
-	public void setReadHook(HsHookRequest hook);
-	public void setWriteHook(HsHookRequest hook);
+	public void setGetValueHook(HsRequestHandler hook);
+	public void setReadHook(HsRequestHandler hook);
+	public void setWriteHook(HsRequestHandler hook);
 }
