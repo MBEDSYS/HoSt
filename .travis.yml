@@ -1,0 +1,9 @@
+language: java
+
+before_script:
+  - git clone --depth=50 --branch=master git://github.com/Mr-TI/JVariant.git Mr-TI/JVariant
+  - cd JVariant
+  - mvn install
+  - cd -
+
+#script: make
