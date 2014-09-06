@@ -1,12 +1,7 @@
 language: java
 
 before_install:
-  - git clone --depth=50 --branch=master git://github.com/Mr-TI/JVariant.git
+  - git clone --depth=50 --branch=master git://github.com/MBEDSYS/JVariant.git
   - cd JVariant
   - mvn install
   - cd -
-
-#install:
-
-
-#script: make
