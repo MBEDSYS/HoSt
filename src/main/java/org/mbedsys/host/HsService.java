@@ -27,7 +27,7 @@ import java.util.Set;
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MbedSYS
  */
-public interface HsDevice {
+public interface HsService {
 	/**
 	 * The device path is compound from the device family following by the MAC
 	 * address or equivalent (&lt;family&gt;/&lt;MAC&gt;) and used to

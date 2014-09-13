@@ -3,7 +3,7 @@ package org.mbedsys.host;
 import java.util.Collection;
 import java.util.Set;
 
-public interface HsDeviceInternal {
+public interface HsServiceInternal {
 	
 	/**
 	 * Add a cluster
@@ -50,5 +50,5 @@ public interface HsDeviceInternal {
 	 * 
 	 * @return the reference to the HsDevice
 	 */
-	public HsDevice getDevice();
+	public HsService getDevice();
 }

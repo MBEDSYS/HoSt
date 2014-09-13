@@ -4,7 +4,7 @@ import org.mbedsys.jvar.Variant;
 
 public interface HsAttributeInternal {
 	/**
-	 * Update the attribute value
+	 * Update the attribute internal value
 	 * 
 	 * @param value new attribute value
 	 */
@@ -13,9 +13,27 @@ public interface HsAttributeInternal {
 	/**
 	 * Overload the getValue default method
 	 * 
-	 * @param hook
+	 * <p>the default action for a get will return the internal value</p>
+	 * 
+	 * @param handler
 	 */
-	public void setGetValueHook(HsRequestHandler hook);
-	public void setReadHook(HsRequestHandler hook);
-	public void setWriteHook(HsRequestHandler hook);
+	public void setGetValueHandler(HsGetValueHandler handler);
+	
+	/**
+	 * Overload the default read handler
+	 * 
+	 * <p>the default action for a read will return the internal value</p>
+	 * 
+	 * @param handler
+	 */
+	public void setReadHandler(HsRequestHandler handler);
+	
+	/**
+	 * Setup the write handler
+	 * 
+	 * <p>the default action for a write will throw a IllegalStateException</p>
+	 * 
+	 * @param handler
+	 */
+	public void setWriteHandler(HsRequestHandler handler);
 }
