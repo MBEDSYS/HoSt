@@ -29,25 +29,26 @@ import java.util.Set;
  */
 public interface HsService {
 	/**
-	 * The service path is compound from the service family following by the MAC
-	 * address or equivalent (&lt;family&gt;/&lt;MAC&gt;) and used to
-	 * distinguish a service. (Example of a ZigBee device path:
-	 * ZigBee/0123456789ABCDEF)
+	 * The service path is compound from the service family following by the
+	 * service identifier like device MAC address or equivalent
+	 * (&lt;family&gt;/&lt;ID&gt;) and used to distinguish a service. (Example
+	 * of a ZigBee device path: ZigBee/0123456789ABCDEF)
 	 * 
 	 * @return the service path using the following format:
-	 *         &lt;family&gt;/&lt;MAC&gt;
+	 *         &lt;family&gt;/&lt;ID&gt;
 	 */
 	String getPath();
 
 	/**
 	 * Get a cluster by the given relative path the following format:
-	 * &lt;cluster type&gt;/&lt;instance id&gt; (Example of a Switch cluster
+	 * &lt;cluster type&gt;/&lt;instance id in hexadecimal&gt; (Example of a Switch cluster
 	 * path: Switch/0)
 	 * 
 	 * @param path
 	 *            relative path from this service with the following format:
 	 *            &lt;cluster type&gt;/&lt;instance id&gt;
-	 * @return a cluster object of null if there is no cluster with the given path
+	 * @return a cluster object of null if there is no cluster with the given
+	 *         path
 	 */
 	HsCluster getCluster(String path);
 
