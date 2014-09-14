@@ -8,6 +8,12 @@ interface Warning {
 
 	/**
 	 * Warning state
+	 *            <ul>
+	 *            <li>IDLE: warning stopped</li>
+	 *            <li>MAINTENANCE: warning in maintenance mode</li>
+	 *            <li>Other value greater than zero: warning active for a
+	 *            specified time in seconds</li>
+	 *            </ul>
 	 */
 	readonly attribute long mode;
 
@@ -25,12 +31,6 @@ interface Warning {
 	 * Set the mode
 	 * 
 	 * @param newState
-	 *            <ul>
-	 *            <li>IDLE: Stop the warning</li>
-	 *            <li>MAINTENANCE: Set warning in maintenance mode</li>
-	 *            <li>Other value greater than zero: Active the warning for a
-	 *            specified time in seconds</li>
-	 *            </ul>
 	 */
 	void setMode(in long newState);
 

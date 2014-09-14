@@ -46,9 +46,29 @@ public interface HsServiceInternal {
 	public Collection<HsClusterInternal> clusters();
 	
 	/**
-	 * Get HsDevice reference
-	 * 
-	 * @return the reference to the HsDevice
+	 * (Re)Enable this service
 	 */
-	public HsService getDevice();
+	public void enable();
+	
+	/**
+	 * Disable this service
+	 */
+	public void disable();
+	
+	/**
+	 * Leave this service
+	 */
+	public void leave();
+	
+	/**
+	 * Set the last activity time to current time
+	 */
+	public void setLastActivityTimeToCurrent();
+	
+	/**
+	 * Get HsService reference
+	 * 
+	 * @return the reference to the HsService
+	 */
+	public HsService getService();
 }

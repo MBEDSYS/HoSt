@@ -49,7 +49,7 @@ public interface HsAttribute {
 	 *            Callback executed on result and/or error
 	 * @throws HsException
 	 *             on error
-	 * @throws HsClusterPermission
+	 * @throws HsServicePermission
 	 *             if this operation is not permitted
 	 */
 	public void read(HsResultHandler onResult) throws HsException;
@@ -61,7 +61,7 @@ public interface HsAttribute {
 	 *            Callback executed on result and/or error
 	 * @throws HsException
 	 *             on error
-	 * @throws HsClusterPermission
+	 * @throws HsServicePermission
 	 *             if this operation is not permitted
 	 */
 	public void write(HsResultHandler onResult) throws HsException;

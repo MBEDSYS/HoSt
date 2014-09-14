@@ -21,7 +21,7 @@ import java.util.Set;
 
 /**
  * <p>
- * This interface describes a device object.
+ * This interface describes a service object.
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
@@ -29,12 +29,12 @@ import java.util.Set;
  */
 public interface HsService {
 	/**
-	 * The device path is compound from the device family following by the MAC
+	 * The service path is compound from the service family following by the MAC
 	 * address or equivalent (&lt;family&gt;/&lt;MAC&gt;) and used to
-	 * distinguish a device. (Example of a ZigBee device path:
+	 * distinguish a service. (Example of a ZigBee device path:
 	 * ZigBee/0123456789ABCDEF)
 	 * 
-	 * @return the device path using the following format:
+	 * @return the service path using the following format:
 	 *         &lt;family&gt;/&lt;MAC&gt;
 	 */
 	String getPath();
@@ -45,7 +45,7 @@ public interface HsService {
 	 * path: Switch/0)
 	 * 
 	 * @param path
-	 *            relative path from this device with the following format:
+	 *            relative path from this service with the following format:
 	 *            &lt;cluster type&gt;/&lt;instance id&gt;
 	 * @return a cluster object of null if there is no cluster with the given path
 	 */

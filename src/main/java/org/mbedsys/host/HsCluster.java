@@ -79,7 +79,7 @@ public interface HsCluster {
 	 *            Callback executed on result and/or error
 	 * @throws HsException
 	 *             on error
-	 * @throws HsClusterPermission
+	 * @throws HsServicePermission
 	 *             if this operation is not permitted
 	 */
 	public void exec(String command, VariantMap arguments, HsResultHandler onResult)
