@@ -21,7 +21,7 @@ import org.mbedsys.jvar.VariantMap;
 
 /**
  * <p>
- * This interface describes callback executed on command/read/write result.
+ * A callback executed on command/read/write result.
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>

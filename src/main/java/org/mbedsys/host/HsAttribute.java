@@ -20,7 +20,7 @@ import org.mbedsys.jvar.Variant;
 
 /**
  * <p>
- * This interface describes a cluster attribute object.
+ * A cluster attribute
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright

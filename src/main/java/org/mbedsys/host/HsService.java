@@ -21,7 +21,7 @@ import java.util.Set;
 
 /**
  * <p>
- * This interface describes a service object.
+ * Aervice object.
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright

@@ -22,7 +22,7 @@ import org.mbedsys.jvar.VariantMap;
 
 /**
  * <p>
- * This interface describes a cluster object.
+ * A cluster
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright

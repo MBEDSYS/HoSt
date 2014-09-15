@@ -21,7 +21,7 @@ import org.mbedsys.jvar.Variant.Type;
 
 /**
  * <p>
- * This interface describes a attribute meta model
+ * An attribute meta model
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright

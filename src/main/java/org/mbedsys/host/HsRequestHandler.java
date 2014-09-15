@@ -20,7 +20,7 @@ import org.mbedsys.jvar.Variant;
 
 /**
  * <p>
- * This interface describes callback executed on command/read/write request.
+ * A callback executed on command/read/write request.
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>

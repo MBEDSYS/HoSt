@@ -20,7 +20,7 @@ import org.mbedsys.jvar.Variant;
 
 /**
  * <p>
- * This interface describes hook for getValue (useful for computed valued attribute)
+ * A hook for getValue (useful for computed valued attribute)
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
