@@ -26,7 +26,7 @@ package org.mbedsys.host;
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
- *         2014 MbedSYS
+ *         2014 MBEDSYS SAS
  */
 public interface HsApp {
 	/**

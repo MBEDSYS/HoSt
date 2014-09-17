@@ -23,7 +23,7 @@ import org.mbedsys.log.Logger;
  * An application context
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
- *         2014 MbedSYS
+ *         2014 MBEDSYS SAS
  */
 public interface HsAppContext {
 	

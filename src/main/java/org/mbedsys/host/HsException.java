@@ -20,7 +20,7 @@ package org.mbedsys.host;
  * An exception
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
- *         2014 MbedSYS
+ *         2014 MBEDSYS SAS
  */
 public class HsException extends Exception {
 

@@ -26,7 +26,7 @@ import org.mbedsys.jvar.VariantMap;
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
- *         2014 MbedSYS
+ *         2014 MBEDSYS SAS
  */
 public interface HsMetaCluster {
 
@@ -60,11 +60,11 @@ public interface HsMetaCluster {
 	public Collection<HsMetaAttribute> attributes();
 
 	/**
-	 * Get the command list
+	 * Get the method list
 	 * 
 	 * @return a set of String
 	 */
-	public Collection<HsMetaCommand> commands();
+	public Collection<HsMetaMethod> methods();
 
 	/**
 	 * Get constants

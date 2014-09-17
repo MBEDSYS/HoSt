@@ -26,7 +26,7 @@ package org.mbedsys.host;
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
- *         2014 MbedSYS
+ *         2014 MBEDSYS SAS
  */
 public interface HsStack {
 	/**
@@ -62,7 +62,7 @@ public interface HsStack {
 	 * 
 	 * @param service
 	 *            reference to the service
-	 * @return
+	 * @return true to become the service owner
 	 */
 	boolean serviceAdd(HsServiceInternal service);
 
@@ -71,7 +71,6 @@ public interface HsStack {
 	 * 
 	 * @param service
 	 *            reference to the service
-	 * @return
 	 */
 	void serviceLeave(HsServiceInternal service);
 }

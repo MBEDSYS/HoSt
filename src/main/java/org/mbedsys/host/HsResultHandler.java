@@ -25,7 +25,7 @@ import org.mbedsys.jvar.VariantMap;
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
- * Copyright 2014 MbedSYS
+ * Copyright 2014 MBEDSYS SAS
  */
 public interface HsResultHandler {
 	

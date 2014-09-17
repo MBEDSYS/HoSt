@@ -16,14 +16,37 @@
 
 package org.mbedsys.host;
 
+import java.io.IOException;
+
 import org.mbedsys.jvar.VariantMap;
+import org.mbedsys.ral.SerialConnector;
 
 /**
  * A stack context
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
- *         2014 MbedSYS
+ *         2014 MBEDSYS SAS
  */
 public interface HsStackContext extends HsAppContext {
-	HsServiceInternal addService(String id, VariantMap properties);
+
+	/**
+	 * Add a new service
+	 * 
+	 * @param id
+	 *            service id/address
+	 * @param properties
+	 *            properties
+	 */
+	void addService(String id, VariantMap properties);
+
+	/**
+	 * Make a new serial connector
+	 * 
+	 * @param path
+	 *            serial device name
+	 * @param options
+	 * @return a SerialConnector
+	 * @throw IOException on IO error
+	 */
+	SerialConnector newSerialConnector(String path, String options) throws IOException;
 }

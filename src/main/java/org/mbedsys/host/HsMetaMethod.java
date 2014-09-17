@@ -16,12 +16,40 @@
 
 package org.mbedsys.host;
 
+import java.util.Collection;
+
+import org.mbedsys.jvar.Variant.Type;
+
+
+
 /**
- * A callbak
+ * <p>
+ * A command meta model
+ * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface HsCallback<T, E extends Exception> {
-	void exec(T arg) throws E;
+public interface HsMetaMethod {
+
+	/**
+	 * Get command type name
+	 * 
+	 * @return type name as String
+	 */
+	public String name();
+
+	/**
+	 * Get the command list
+	 * 
+	 * @return a set of String
+	 */
+	public Collection<HsMetaParameter> parameters();
+	
+	/**
+	 * Get return type
+	 * 
+	 * @return Variant.Type, {@link Type#NULL} means that the return type is void
+	 */
+	public Type returnType();
 }

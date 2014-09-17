@@ -14,42 +14,52 @@
  *   limitations under the License.
  */
 
-package org.mbedsys.host;
+package org.mbedsys.ral;
 
-import java.util.Collection;
-
-import org.mbedsys.jvar.Variant.Type;
-
-
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
- * <p>
- * A command meta model
- * </p>
+ * Serial connector
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
- *         2014 MbedSYS
+ *         2014 MBEDSYS SAS
  */
-public interface HsMetaCommand {
+public interface SerialConnector {
 
 	/**
-	 * Get command type name
+	 * Open the connection
 	 * 
-	 * @return type name as String
+	 * @throws IOException on I/O error
 	 */
-	public String name();
+	public void openConnection() throws IOException;
 
 	/**
-	 * Get the command list
-	 * 
-	 * @return a set of String
+	 * Close the connection
 	 */
-	public Collection<HsMetaParameter> parameters();
-	
+	public void closeConnection();
+
 	/**
-	 * Get return type
+	 * Get the input stream
 	 * 
-	 * @return Variant.Type, {@link Type#NULL} means that the return type is void
+	 * @return an InputStream
+	 * @throws IOException on I/O error
 	 */
-	public Type returnType();
+	public InputStream getInputStream() throws IOException;
+
+	/**
+	 * Get the output stream
+	 * 
+	 * @return an OutputStream
+	 * @throws IOException on I/O error
+	 */
+	public OutputStream getOutputStream() throws IOException;
+
+	/**
+	 * Get the device name
+	 * 
+	 * @return device name as string
+	 */
+	public String getDevName();
 }

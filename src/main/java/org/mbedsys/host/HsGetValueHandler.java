@@ -24,7 +24,7 @@ import org.mbedsys.jvar.Variant;
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
- * Copyright 2014 MbedSYS
+ * Copyright 2014 MBEDSYS SAS
  */
 public interface HsGetValueHandler {
 	
