@@ -22,11 +22,11 @@ package org.s24b.log;
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface LogHandler {
+public interface HsLogHandler {
 	/**
 	 * Method called when a record is published
 	 * 
 	 * @param record LogRecord object
 	 */
-	void publish(LogRecord record);
+	void publish(HsLogRecord record);
 }

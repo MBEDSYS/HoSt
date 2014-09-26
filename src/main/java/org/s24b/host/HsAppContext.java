@@ -17,7 +17,7 @@
 package org.s24b.host;
 
 import org.mbedsys.jvar.VariantMap;
-import org.s24b.log.Logger;
+import org.s24b.log.HsLogger;
 
 /**
  * An application context
@@ -32,7 +32,7 @@ public interface HsAppContext {
 	 * 
 	 * @return a Logger
 	 */
-	Logger getLogger();
+	HsLogger getLogger();
 	
 	/**
 	 * Get the application settings

@@ -22,7 +22,7 @@ package org.s24b.log;
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public enum Level {
+public enum HsLogLevel {
 
 	/**
 	 * OFF is a special level that can be used to turn off logging.

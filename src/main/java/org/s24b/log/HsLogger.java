@@ -22,7 +22,7 @@ package org.s24b.log;
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface Logger {
+public interface HsLogger {
 	/**
 	 * Log a message, with no arguments.
 	 * <p>
@@ -35,7 +35,7 @@ public interface Logger {
 	 * @param msg
 	 *            The string message
 	 */
-	public abstract void log(Level level, Object msg);
+	public abstract void log(HsLogLevel level, String msg);
 
 	/**
 	 * Log a message, with one object property.
@@ -52,7 +52,7 @@ public interface Logger {
 	 * @param param1
 	 *            property to the message
 	 */
-	public abstract void log(Level level, Object msg, Object param1);
+	public abstract void log(HsLogLevel level, String msg, Object param1);
 
 	/**
 	 * Log a message, with an array of object arguments.
@@ -69,7 +69,7 @@ public interface Logger {
 	 * @param params
 	 *            array of propertys to the message
 	 */
-	public abstract void log(Level level, Object msg, Object[] params);
+	public abstract void log(HsLogLevel level, String msg, Object[] params);
 
 	/**
 	 * Log a message, with associated Throwable information.
@@ -91,7 +91,7 @@ public interface Logger {
 	 * @param thrown
 	 *            Throwable associated with log message.
 	 */
-	public abstract void log(Level level, Object msg, Throwable thrown);
+	public abstract void log(HsLogLevel level, String msg, Throwable thrown);
 
 	/**
 	 * Log a SEVERE message.
@@ -103,7 +103,7 @@ public interface Logger {
 	 * @param msg
 	 *            The string message
 	 */
-	public abstract void severe(Object msg);
+	public abstract void severe(String msg);
 
 	/**
 	 * Log a WARNING message.
@@ -115,7 +115,7 @@ public interface Logger {
 	 * @param msg
 	 *            The string message
 	 */
-	public abstract void warning(Object msg);
+	public abstract void warning(String msg);
 
 	/**
 	 * Log an INFO message.
@@ -127,7 +127,7 @@ public interface Logger {
 	 * @param msg
 	 *            The string message
 	 */
-	public abstract void info(Object msg);
+	public abstract void info(String msg);
 
 	/**
 	 * Log a CONFIG message.
@@ -139,7 +139,7 @@ public interface Logger {
 	 * @param msg
 	 *            The string message
 	 */
-	public abstract void config(Object msg);
+	public abstract void config(String msg);
 
 	/**
 	 * Log a FINE message.
@@ -151,7 +151,7 @@ public interface Logger {
 	 * @param msg
 	 *            The string message
 	 */
-	public abstract void fine(Object msg);
+	public abstract void fine(String msg);
 
 	/**
 	 * Log a FINER message.
@@ -163,7 +163,7 @@ public interface Logger {
 	 * @param msg
 	 *            The string message
 	 */
-	public abstract void finer(Object msg);
+	public abstract void finer(String msg);
 
 	/**
 	 * Log a FINEST message.
@@ -175,5 +175,5 @@ public interface Logger {
 	 * @param msg
 	 *            The string message
 	 */
-	public abstract void finest(Object msg);
+	public abstract void finest(String msg);
 }

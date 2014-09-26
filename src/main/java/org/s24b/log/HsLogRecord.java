@@ -22,7 +22,7 @@ package org.s24b.log;
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface LogRecord {
+public interface HsLogRecord {
 	/**
 	 * Get log record date in milliseconds since 1970-01-01 at 00:00:00
 	 * 
@@ -31,11 +31,18 @@ public interface LogRecord {
 	long getMillis();
 
 	/**
+	 * Get the origin bundle name of this record
+	 * 
+	 * @return the bundle symbolic name
+	 */
+	String getBundleName();
+
+	/**
 	 * Get the log level of this record
 	 * 
 	 * @return the LogLevel
 	 */
-	Level getLevel();
+	HsLogLevel getLevel();
 
 	/**
 	 * Get the message
