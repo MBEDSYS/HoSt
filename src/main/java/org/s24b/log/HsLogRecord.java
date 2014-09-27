@@ -50,4 +50,18 @@ public interface HsLogRecord {
 	 * @return a String value
 	 */
 	String getMessage();
+
+	/**
+	 * Get the related thrown object
+	 * 
+	 * @return the related Throwable (can be null)
+	 */
+	Throwable getThrown();
+
+	/**
+	 * Get the parameters
+	 * 
+	 * @return array of parameters (can be null)
+	 */
+	Object[] getParameters();
 }
