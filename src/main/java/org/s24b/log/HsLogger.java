@@ -23,42 +23,21 @@ package org.s24b.log;
  *         2014 MBEDSYS SAS
  */
 public interface HsLogger {
-	/**
-	 * Log a message, with no arguments.
-	 * 
-	 * @param level
-	 *            One of the message level identifiers, e.g., SEVERE
-	 * @param msg
-	 *            The string message
-	 */
-	public abstract void log(HsLogLevel level, String msg);
 
 	/**
-	 * Log a message, with one object property.
-	 * 
-	 * @param level
-	 *            One of the message level identifiers, e.g., SEVERE
-	 * @param msg
-	 *            The string message (or a key in the message catalog)
-	 * @param param1
-	 *            property to the message
-	 */
-	public abstract void log(HsLogLevel level, String msg, Object param1);
-
-	/**
-	 * Log a message, with an array of object arguments.
+	 * Log a message, with additional arguments.
 	 * 
 	 * @param level
 	 *            One of the message level identifiers, e.g., SEVERE
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param params
-	 *            array of propertys to the message
+	 *            array of properties to the message
 	 */
-	public abstract void log(HsLogLevel level, String msg, Object[] params);
+	public abstract void log(HsLogLevel level, String msg, Object... params);
 
 	/**
-	 * Log a message, with associated Throwable information.
+	 * Log a message, with associated Throwable information and optional arguments.
 	 * 
 	 * @param level
 	 *            One of the message level identifiers, e.g., SEVERE
@@ -66,242 +45,126 @@ public interface HsLogger {
 	 *            The string message (or a key in the message catalog)
 	 * @param thrown
 	 *            Throwable associated with log message.
+	 * @param params
+	 *            array of properties to the message
 	 */
-	public abstract void log(HsLogLevel level, String msg, Throwable thrown);
-
+	public abstract void log(HsLogLevel level, String msg, Throwable thrown, Object... params);
+	
 	/**
-	 * Log a SEVERE message.
-	 * 
-	 * @param msg
-	 *            The string message
-	 */
-	public abstract void severe(String msg);
-
-	/**
-	 * Log a SEVERE message, with one object property.
-	 * 
-	 * @param msg
-	 *            The string message (or a key in the message catalog)
-	 * @param param1
-	 *            property to the message
-	 */
-	public abstract void severe(String msg, Object param1);
-
-	/**
-	 * Log a SEVERE message, with an array of object arguments.
+	 * Log a SEVERE message, with optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param params
 	 *            array of propertys to the message
 	 */
-	public abstract void severe(String msg, Object[] params);
+	public abstract void severe(String msg, Object... params);
 
 	/**
-	 * Log a SEVERE message, with associated Throwable information.
+	 * Log a SEVERE message, with associated Throwable information and optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param thrown
 	 *            Throwable associated with log message.
+	 * @param params
+	 *            array of properties to the message
 	 */
-	public abstract void severe(String msg, Throwable thrown);
+	public abstract void severe(String msg, Throwable thrown, Object... params);
 
 	/**
-	 * Log a WARNING message.
-	 * 
-	 * @param msg
-	 *            The string message
-	 */
-	public abstract void warning(String msg);
-
-	/**
-	 * Log a WARNING message, with one object property.
-	 * 
-	 * @param msg
-	 *            The string message (or a key in the message catalog)
-	 * @param param1
-	 *            property to the message
-	 */
-	public abstract void warning(String msg, Object param1);
-
-	/**
-	 * Log a WARNING message, with an array of object arguments.
+	 * Log a WARNING message, with optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param params
 	 *            array of propertys to the message
 	 */
-	public abstract void warning(String msg, Object[] params);
+	public abstract void warning(String msg, Object... params);
 
 	/**
-	 * Log a WARNING message, with associated Throwable information.
+	 * Log a WARNING message, with associated Throwable information and optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param thrown
 	 *            Throwable associated with log message.
+	 * @param params
+	 *            array of properties to the message
 	 */
-	public abstract void warning(String msg, Throwable thrown);
+	public abstract void warning(String msg, Throwable thrown, Object... params);
 
 	/**
-	 * Log an INFO message.
-	 * 
-	 * @param msg
-	 *            The string message
-	 */
-	public abstract void info(String msg);
-
-	/**
-	 * Log a INFO message, with one object property.
-	 * 
-	 * @param msg
-	 *            The string message (or a key in the message catalog)
-	 * @param param1
-	 *            property to the message
-	 */
-	public abstract void info(String msg, Object param1);
-
-	/**
-	 * Log a INFO message, with an array of object arguments.
+	 * Log an INFO message, with optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param params
 	 *            array of propertys to the message
 	 */
-	public abstract void info(String msg, Object[] params);
+	public abstract void info(String msg, Object... params);
 
 	/**
-	 * Log a INFO message, with associated Throwable information.
+	 * Log a INFO message, with associated Throwable information and optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param thrown
 	 *            Throwable associated with log message.
+	 * @param params
+	 *            array of properties to the message
 	 */
-	public abstract void info(String msg, Throwable thrown);
+	public abstract void info(String msg, Throwable thrown, Object... params);
 
 	/**
-	 * Log a CONFIG message.
-	 * 
-	 * @param msg
-	 *            The string message
-	 */
-	public abstract void config(String msg);
-
-	/**
-	 * Log a CONFIG message, with one object property.
-	 * 
-	 * @param msg
-	 *            The string message (or a key in the message catalog)
-	 * @param param1
-	 *            property to the message
-	 */
-	public abstract void config(String msg, Object param1);
-
-	/**
-	 * Log a CONFIG message, with an array of object arguments.
+	 * Log a CONFIG message, with optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param params
 	 *            array of propertys to the message
 	 */
-	public abstract void config(String msg, Object[] params);
+	public abstract void config(String msg, Object... params);
 
 	/**
-	 * Log a CONFIG message, with associated Throwable information.
+	 * Log a CONFIG message, with associated Throwable information and optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param thrown
 	 *            Throwable associated with log message.
+	 * @param params
+	 *            array of properties to the message
 	 */
-	public abstract void config(String msg, Throwable thrown);
+	public abstract void config(String msg, Throwable thrown, Object... params);
 
 	/**
-	 * Log a FINE message.
-	 * 
-	 * @param msg
-	 *            The string message
-	 */
-	public abstract void fine(String msg);
-
-	/**
-	 * Log a FINE message, with one object property.
-	 * 
-	 * @param msg
-	 *            The string message (or a key in the message catalog)
-	 * @param param1
-	 *            property to the message
-	 */
-	public abstract void fine(String msg, Object param1);
-
-	/**
-	 * Log a FINE message, with an array of object arguments.
+	 * Log a FINE message, with optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param params
 	 *            array of propertys to the message
 	 */
-	public abstract void fine(String msg, Object[] params);
+	public abstract void fine(String msg, Object... params);
 
 	/**
-	 * Log a FINER message.
-	 * 
-	 * @param msg
-	 *            The string message
-	 */
-	public abstract void finer(String msg);
-
-	/**
-	 * Log a FINER message, with one object property.
-	 * 
-	 * @param msg
-	 *            The string message (or a key in the message catalog)
-	 * @param param1
-	 *            property to the message
-	 */
-	public abstract void finer(String msg, Object param1);
-
-	/**
-	 * Log a FINER message, with an array of object arguments.
+	 * Log a FINER message, with optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param params
 	 *            array of propertys to the message
 	 */
-	public abstract void finer(String msg, Object[] params);
+	public abstract void finer(String msg, Object... params);
 
 	/**
-	 * Log a FINEST message.
-	 * 
-	 * @param msg
-	 *            The string message
-	 */
-	public abstract void finest(String msg);
-
-	/**
-	 * Log a FINEST message, with one object property.
-	 * 
-	 * @param msg
-	 *            The string message (or a key in the message catalog)
-	 * @param param1
-	 *            property to the message
-	 */
-	public abstract void finest(String msg, Object param1);
-
-	/**
-	 * Log a FINEST message, with an array of object arguments.
+	 * Log a FINEST message, with optional arguments.
 	 * 
 	 * @param msg
 	 *            The string message (or a key in the message catalog)
 	 * @param params
 	 *            array of propertys to the message
 	 */
-	public abstract void finest(String msg, Object[] params);
+	public abstract void finest(String msg, Object... params);
 }
