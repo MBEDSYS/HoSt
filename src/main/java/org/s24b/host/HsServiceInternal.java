@@ -26,20 +26,34 @@ import java.util.Set;
  *         2014 MBEDSYS SAS
  */
 public interface HsServiceInternal {
-	
+
 	/**
-	 * Add a interface
+	 * Add an interface to this service
 	 * 
-	 * @param interface
+	 * @param typeName
+	 *            Interface name
+	 * @return the internal reference to the created interface
+	 * @throws HsException
+	 *             if the interface cannot be created with the given name or an
+	 *             other interface exists with the same name and id
 	 */
-	void addInterface(String typeName, HsCallback<HsInterfaceInternal, RuntimeException> onInit);
-	
+	HsInterfaceInternal addInterface(String typeName) throws HsException;
+
 	/**
-	 * Add a interface
+	 * Add an interface to this service with a specific id (other than default:
+	 * 0)
 	 * 
-	 * @param interface
+	 * @param typeName
+	 *            Interface name
+	 * @param id
+	 *            Interface id
+	 * @return the internal reference to the created interface
+	 * @throws HsException
+	 *             if the interface cannot be created with the given name or an
+	 *             other interface exists with the same name and id
 	 */
-	void addInterface(String typeName, HsCallback<HsInterfaceInternal, RuntimeException> onInit, int id);
+	HsInterfaceInternal addInterface(String typeName, int id)
+			throws HsException;
 
 	/**
 	 * Get a interface by the given relative path the following format:
@@ -49,7 +63,8 @@ public interface HsServiceInternal {
 	 * @param path
 	 *            relative path from this device with the following format:
 	 *            &lt;interface type&gt;/&lt;instance id&gt;
-	 * @return a interface object of null if there is no interface with the given path
+	 * @return a interface object of null if there is no interface with the
+	 *         given path
 	 */
 	HsInterfaceInternal getInterface(String path);
 
@@ -66,22 +81,22 @@ public interface HsServiceInternal {
 	 * @return a collection of attributes
 	 */
 	public Collection<HsInterfaceInternal> interfaces();
-	
+
 	/**
 	 * (Re)Enable this service
 	 */
 	public void enable();
-	
+
 	/**
 	 * Disable this service
 	 */
 	public void disable();
-	
+
 	/**
 	 * Leave this service
 	 */
 	public void leave();
-	
+
 	/**
 	 * Set the last activity time to current time
 	 */

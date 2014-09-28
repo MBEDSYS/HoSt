@@ -46,11 +46,17 @@ public interface HsStackContext extends HsAppContext {
 	 * Merge a database containing a set of custom interface definition used by
 	 * this stack
 	 * </p>
-	 * <p>WARNING: this method cannot be used outside {@link HsStack#setup(HsStackContext)}</p>
+	 * <p>
+	 * WARNING: this method cannot be used outside
+	 * {@link HsStack#setup(HsStackContext)}
+	 * </p>
+	 * 
 	 * @param input
 	 *            Input stream to BCON format database
-	 * @throws HsException if the meta database cannot be merged
-	 * @throws ParserException if the input is not in the wanted format
+	 * @throws HsException
+	 *             if the meta database cannot be merged
+	 * @throws ParserException
+	 *             if the input is not in the wanted format
 	 */
 	void mergeMetaDB(InputStream input) throws HsException, ParserException;
 
@@ -61,7 +67,8 @@ public interface HsStackContext extends HsAppContext {
 	 *            serial device name
 	 * @param options
 	 * @return a SerialConnector
-	 * @throw IOException on IO error
+	 * @throws IOException
+	 *             on IO error
 	 */
 	SerialConnector newSerialConnector(String path, String options)
 			throws IOException;

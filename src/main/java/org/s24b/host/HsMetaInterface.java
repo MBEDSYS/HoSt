@@ -38,12 +38,12 @@ public interface HsMetaInterface {
 	public Collection<HsMetaInterface> parents();
 	
 	/**
+	 * Determine if a given meta interface can be assigned to objects of this meta interface
 	 * 
-	 * 
-	 * @param metaCluster
-	 * @return
+	 * @param metaInterface meta interface to be checked
+	 * @return true if whether objects of the interface metaInterface can be assigned to objects of this meta interface
 	 */
-	public boolean isAssignableFrom(HsMetaInterface metaCluster);
+	public boolean isAssignableFrom(HsMetaInterface metaInterface);
 
 	/**
 	 * Get cluster type name

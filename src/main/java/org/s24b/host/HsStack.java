@@ -43,8 +43,8 @@ public interface HsStack {
 	 * Setup this stack. This method is called when the core and all the stacks
 	 * are fully initialized
 	 * 
-	 * @param appContext
-	 *            Application context
+	 * @param stackContext
+	 *            Stack context
 	 */
 	void setup(HsStackContext stackContext) throws Exception;
 
