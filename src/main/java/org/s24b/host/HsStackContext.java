@@ -21,7 +21,7 @@ import java.io.InputStream;
 
 import org.mbedsys.jvar.ParserException;
 import org.mbedsys.jvar.VariantMap;
-import org.s24b.ral.SerialConnector;
+import org.s24b.ral.HsSerialConnector;
 
 /**
  * A stack context
@@ -70,6 +70,6 @@ public interface HsStackContext extends HsAppContext {
 	 * @throws IOException
 	 *             on IO error
 	 */
-	SerialConnector newSerialConnector(String path, String options)
+	HsSerialConnector newSerialConnector(String path, String options)
 			throws IOException;
 }

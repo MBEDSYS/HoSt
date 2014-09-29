@@ -7,7 +7,7 @@
 interface PilotWireHeater {
 
 	/**
-	 * Warning state
+	 * Heater state
 	 */
 	readonly attribute unsigned long mode;
 

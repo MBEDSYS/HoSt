@@ -1,5 +1,5 @@
 package org.s24b.util;
 
-public interface Cancellable {
+public interface HsCancellable {
 	public void cancel();
 }
