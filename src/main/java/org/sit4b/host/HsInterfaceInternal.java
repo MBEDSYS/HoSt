@@ -25,13 +25,14 @@ import java.util.Collection;
  *         2014 MBEDSYS SAS
  */
 public interface HsInterfaceInternal {
-
 	/**
-	 * Get the attribute name list
+	 * The cluster path is a relative path from the parent device with the following format:
+	 *            &lt;cluster type&gt;/&lt;instance id&gt;
 	 * 
-	 * @return a set of String
+	 * @return the relative path from the parent device with the following format:
+	 *            &lt;cluster type&gt;/&lt;instance id&gt;
 	 */
-	public HsAttribute getAttribute();
+	public String getPath();
 
 	/**
 	 * Get all the attributes

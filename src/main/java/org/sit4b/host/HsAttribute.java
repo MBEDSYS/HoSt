@@ -33,7 +33,7 @@ public interface HsAttribute {
 	 * 
 	 * @return a HsMetaAttribute
 	 */
-	public HsMetaAttribute metaAttribute();
+	public HsMetaAttribute getMetaAttribute();
 
 	/**
 	 * Get the current attribute value in cache

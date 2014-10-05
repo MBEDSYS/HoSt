@@ -17,7 +17,6 @@
 package org.sit4b.host;
 
 import java.util.Collection;
-import java.util.Set;
 
 /**
  * <p>
@@ -51,13 +50,6 @@ public interface HsService {
 	 *         path
 	 */
 	HsInterface getInterface(String path);
-
-	/**
-	 * Get the interface path list
-	 * 
-	 * @return a set of String
-	 */
-	public Set<String> interfacePathSet();
 
 	/**
 	 * Get all the interfaces

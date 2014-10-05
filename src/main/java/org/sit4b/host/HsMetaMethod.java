@@ -37,7 +37,7 @@ public interface HsMetaMethod {
 	 * 
 	 * @return type name as String
 	 */
-	public String name();
+	public String getName();
 
 	/**
 	 * Get the command list
@@ -51,5 +51,5 @@ public interface HsMetaMethod {
 	 * 
 	 * @return Variant.Type, {@link Type#NULL} means that the return type is void
 	 */
-	public Type returnType();
+	public Type getReturnType();
 }

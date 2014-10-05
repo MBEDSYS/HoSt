@@ -50,7 +50,7 @@ public interface HsMetaInterface {
 	 * 
 	 * @return type name as String
 	 */
-	public String name();
+	public String getName();
 
 	/**
 	 * Get the attribute list

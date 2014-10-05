@@ -43,7 +43,7 @@ public interface HsInterface {
 	 * 
 	 * @return type name as String
 	 */
-	public HsMetaInterface metaCluster();
+	public HsMetaInterface getMetaCluster();
 	
 	/**
 	 * Test if this cluster is an instance of given type

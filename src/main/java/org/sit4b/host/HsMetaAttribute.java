@@ -34,14 +34,14 @@ public interface HsMetaAttribute {
 	 * 
 	 * @return Variant.Type
 	 */
-	public Type type();
+	public Type getType();
 
 	/**
 	 * Get cluster type name
 	 * 
 	 * @return type name as String
 	 */
-	public String name();
+	public String getName();
 	
 	/**
 	 * Get if the attribute is read only
