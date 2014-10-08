@@ -19,8 +19,9 @@ package org.sit4b.host;
 import java.util.Collection;
 
 /**
+ * A service
  * <p>
- * A service object.
+ * A service object used by the end application.
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
@@ -40,14 +41,14 @@ public interface HsService {
 
 	/**
 	 * Get a interface by the given relative path the following format:
-	 * &lt;interface type&gt;/&lt;instance id in hexadecimal&gt; (Example of a Switch interface
-	 * path: Switch/0)
+	 * &lt;interface type&gt;/&lt;instance id in hexadecimal&gt; (Example of a
+	 * Switch interface path: Switch/0)
 	 * 
 	 * @param path
 	 *            relative path from this service with the following format:
 	 *            &lt;interface type&gt;/&lt;instance id&gt;
-	 * @return a interface object of null if there is no interface with the given
-	 *         path
+	 * @return a interface object of null if there is no interface with the
+	 *         given path
 	 */
 	HsInterface getInterface(String path);
 

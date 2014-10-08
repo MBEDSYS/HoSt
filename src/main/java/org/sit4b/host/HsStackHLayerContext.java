@@ -20,26 +20,38 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.mbedsys.jvar.ParserException;
+import org.mbedsys.jvar.Variant;
 import org.mbedsys.jvar.VariantMap;
-import org.sit4b.ral.HsSerialConnector;
+import org.sit4b.log.HsLogger;
 
 /**
- * A stack context
+ * A high layer stack context
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface HsStackContext extends HsAppContext {
+public interface HsStackHLayerContext {
 
 	/**
-	 * Add a new service
+	 * Get the suitable logger
 	 * 
-	 * @param id
-	 *            service id/address
-	 * @param properties
-	 *            properties
+	 * @return a Logger
 	 */
-	void addService(String id, VariantMap properties);
+	HsLogger getLogger();
+
+	/**
+	 * Get the application settings
+	 * 
+	 * @return a map variant
+	 */
+	VariantMap getSettings();
+
+	/**
+	 * Get the reference to the stack
+	 * 
+	 * @return {@link HsStackLLayer} reference
+	 */
+	HsStackLLayer getStack();
 
 	/**
 	 * <p>
@@ -48,28 +60,18 @@ public interface HsStackContext extends HsAppContext {
 	 * </p>
 	 * <p>
 	 * WARNING: this method cannot be used outside
-	 * {@link HsStack#setup(HsStackContext)}
+	 * {@link HsStackLLayer#setup(HsStackContext)}
 	 * </p>
 	 * 
 	 * @param input
-	 *            Input stream to BCON format database
+	 *            Input stream to the database
+	 * @param format
+	 *            database format
 	 * @throws HsException
 	 *             if the meta database cannot be merged
 	 * @throws ParserException
 	 *             if the input is not in the wanted format
 	 */
-	void mergeMetaDB(InputStream input) throws HsException, ParserException;
-
-	/**
-	 * Make a new serial connector
-	 * 
-	 * @param path
-	 *            serial device name
-	 * @param options
-	 * @return a SerialConnector
-	 * @throws IOException
-	 *             on IO error
-	 */
-	HsSerialConnector newSerialConnector(String path, String options)
-			throws IOException;
+	public void loadMetaDB(InputStream input, Variant.Format format)
+			throws HsException, IOException;
 }

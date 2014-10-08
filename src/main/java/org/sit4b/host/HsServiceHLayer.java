@@ -20,12 +20,17 @@ import java.util.Collection;
 import java.util.Set;
 
 /**
- * A service (internal object)
+ * A high level service
+ * 
+ * <p>
+ * This is the high layer accessor to the service used by a {@link HsStackHLayer}
+ * to perform required operation on a service
+ * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface HsServiceInternal {
+public interface HsServiceHLayer {
 
 	/**
 	 * Add an interface to this service
@@ -83,22 +88,25 @@ public interface HsServiceInternal {
 	public Collection<HsInterfaceInternal> interfaces();
 
 	/**
-	 * (Re)Enable this service
+	 * Send a buffer the the low layer service
+	 * 
+	 * @param buffer
+	 *            data to send
+	 * @throws Exception
+	 *             on error
 	 */
-	public void enable();
+	void send(byte[] buffer) throws Exception;
 
 	/**
-	 * Disable this service
+	 * Set the callback to receive data from the low layer service
+	 * 
+	 * @param callback
+	 *            the given callback
 	 */
-	public void disable();
+	void setRecvClbk(HsCallback<byte[], Exception> callback);
 
 	/**
 	 * Leave this service
 	 */
 	public void leave();
-
-	/**
-	 * Set the last activity time to current time
-	 */
-	public void setLastActivityTimeToCurrent();
 }

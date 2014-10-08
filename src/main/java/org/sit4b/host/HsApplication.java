@@ -16,28 +16,25 @@
 
 package org.sit4b.host;
 
-import org.mbedsys.jvar.VariantMap;
-import org.sit4b.log.HsLogger;
-
 /**
- * An application context
+ * <p>
+ * An application
+ * </p>
+ * <p>
+ * HsApp is an object that represent a client application. This application is
+ * set up when the core and all the stacks are fully initialized.
+ * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface HsAppContext {
-	
+public interface HsApplication {
 	/**
-	 * Get the suitable logger
+	 * Setup this application. This method is called when the core and all the
+	 * stacks are fully initialized
 	 * 
-	 * @return a Logger
+	 * @param appContext
+	 *            Application context
 	 */
-	HsLogger getLogger();
-	
-	/**
-	 * Get the application settings
-	 * 
-	 * @return a map variant
-	 */
-	VariantMap getSettings();
+	void setup(HsApplicationContext appContext);
 }
