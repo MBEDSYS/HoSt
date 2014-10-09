@@ -23,14 +23,14 @@ import java.util.Set;
  * A high level service
  * 
  * <p>
- * This is the high layer accessor to the service used by a {@link HsStackHLayer}
+ * This is the high layer accessor to the service used by a {@link HsStackHL}
  * to perform required operation on a service
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface HsServiceHLayer {
+public interface HsServiceInternalHL {
 
 	/**
 	 * Add an interface to this service

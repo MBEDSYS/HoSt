@@ -17,18 +17,20 @@
 package org.sit4b.host;
 
 import java.io.IOException;
+import java.io.InputStream;
 
+import org.mbedsys.jvar.ParserException;
+import org.mbedsys.jvar.Variant;
 import org.mbedsys.jvar.VariantMap;
 import org.sit4b.log.HsLogger;
-import org.sit4b.ral.HsSerialConnector;
 
 /**
- * A low layer stack context
+ * A high layer stack context
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface HsStackLLayerContext {
+public interface HsStackHLContext {
 
 	/**
 	 * Get the suitable logger
@@ -47,34 +49,36 @@ public interface HsStackLLayerContext {
 	/**
 	 * Get the reference to the stack
 	 * 
-	 * @return {@link HsStackLLayer} reference
+	 * @return {@link HsStackHL} reference
 	 */
-	HsStackLLayer getStack();
+	HsStackHL getStack();
 
 	/**
-	 * Add a new service
+	 * Get the stack family name
 	 * 
-	 * @param id
-	 *            service id/address
-	 * @param properties
-	 *            properties
-	 * @return low layer service handler to the new generated service
+	 * @return family name
+	 */
+	String getServiceFamilyName();
+
+	/**
+	 * <p>
+	 * Merge a database containing a set of custom interface definition used by
+	 * this stack
+	 * </p>
+	 * <p>
+	 * WARNING: this method cannot be used outside
+	 * {@link HsStackHL#setup(HsStackHLContext)}
+	 * </p>
+	 * 
+	 * @param input
+	 *            Input stream to the database
+	 * @param format
+	 *            database format
 	 * @throws HsException
-	 *             when an error occurs
+	 *             if the meta database cannot be merged
+	 * @throws ParserException
+	 *             if the input is not in the wanted format
 	 */
-	HsServiceLLayer addService(String id, VariantMap properties)
-			throws HsException;
-
-	/**
-	 * Make a new serial connector
-	 * 
-	 * @param path
-	 *            serial device name
-	 * @param options
-	 * @return a {@link HsSerialConnector}
-	 * @throws IOException
-	 *             on IO error
-	 */
-	HsSerialConnector newSerialConnector(String path, String options)
-			throws IOException;
+	public void loadMetaDB(InputStream input, Variant.Format format)
+			throws HsException, IOException;
 }

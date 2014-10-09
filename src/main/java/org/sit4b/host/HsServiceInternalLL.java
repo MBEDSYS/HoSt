@@ -20,14 +20,14 @@ package org.sit4b.host;
  * A low level service
  * 
  * <p>
- * This is the low layer accessor to the service used by a {@link HsStackLLayer}
+ * This is the low layer accessor to the service used by a {@link HsStackLL}
  * to perform required operation on a service
  * </p>
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface HsServiceLLayer {
+public interface HsServiceInternalLL {
 
 	/**
 	 * (Re)Enable this service

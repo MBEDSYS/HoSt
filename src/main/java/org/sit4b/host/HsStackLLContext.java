@@ -17,20 +17,18 @@
 package org.sit4b.host;
 
 import java.io.IOException;
-import java.io.InputStream;
 
-import org.mbedsys.jvar.ParserException;
-import org.mbedsys.jvar.Variant;
 import org.mbedsys.jvar.VariantMap;
 import org.sit4b.log.HsLogger;
+import org.sit4b.ral.HsSerialConnector;
 
 /**
- * A high layer stack context
+ * A low layer stack context
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a> Copyright
  *         2014 MBEDSYS SAS
  */
-public interface HsStackHLayerContext {
+public interface HsStackLLContext {
 
 	/**
 	 * Get the suitable logger
@@ -47,31 +45,43 @@ public interface HsStackHLayerContext {
 	VariantMap getSettings();
 
 	/**
-	 * Get the reference to the stack
+	 * Get the stack family name
 	 * 
-	 * @return {@link HsStackLLayer} reference
+	 * @return family name
 	 */
-	HsStackLLayer getStack();
+	String getServiceFamilyName();
 
 	/**
-	 * <p>
-	 * Merge a database containing a set of custom interface definition used by
-	 * this stack
-	 * </p>
-	 * <p>
-	 * WARNING: this method cannot be used outside
-	 * {@link HsStackLLayer#setup(HsStackContext)}
-	 * </p>
+	 * Get the reference to the stack
 	 * 
-	 * @param input
-	 *            Input stream to the database
-	 * @param format
-	 *            database format
-	 * @throws HsException
-	 *             if the meta database cannot be merged
-	 * @throws ParserException
-	 *             if the input is not in the wanted format
+	 * @return {@link HsStackLL} reference
 	 */
-	public void loadMetaDB(InputStream input, Variant.Format format)
-			throws HsException, IOException;
+	HsStackLL getStack();
+
+	/**
+	 * Add a new service
+	 * 
+	 * @param id
+	 *            service id/address
+	 * @param properties
+	 *            properties
+	 * @return low layer service handler to the new generated service
+	 * @throws HsException
+	 *             when an error occurs
+	 */
+	HsServiceInternalLL addService(String id, VariantMap properties)
+			throws HsException;
+
+	/**
+	 * Make a new serial connector
+	 * 
+	 * @param path
+	 *            serial device name
+	 * @param options
+	 * @return a {@link HsSerialConnector}
+	 * @throws IOException
+	 *             on IO error
+	 */
+	HsSerialConnector newSerialConnector(String path, String options)
+			throws IOException;
 }
