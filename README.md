@@ -1,4 +1,4 @@
-HoSt
+HoBus
 =======
 
 [![Build Status](https://travis-ci.org/MBEDSYS/HoBus.svg?branch=master)](https://travis-ci.org/MBEDSYS/HoBus)
