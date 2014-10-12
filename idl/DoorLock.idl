@@ -1,7 +1,7 @@
 #include <SecuritySensor.idl> 
 
 /**
- * 
+ * A door lock
  * 
  * @author <a href="mailto:emericv@mbedsys.fr">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS

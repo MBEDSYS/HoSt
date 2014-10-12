@@ -1,5 +1,5 @@
 /**
- * This interface defines a security sensor
+ * A security sensor
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS

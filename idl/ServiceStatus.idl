@@ -1,5 +1,5 @@
 /**
- * This interface defines a cluster containing the device status
+ * A service status
  * 
  * @author <a href="mailto:emericv@mbedsys.fr">Emeric Verschuur</a>
  *         Copyright 2014 MbedSYS

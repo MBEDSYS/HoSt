@@ -1,5 +1,5 @@
 /**
- * This interface defines a luminosity sensor
+ * A luminosity sensor
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS

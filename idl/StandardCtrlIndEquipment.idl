@@ -1,7 +1,7 @@
 #include <SecuritySensor.idl> 
 
 /**
- * This interface defines a standard control and indicating equipment (CIE)
+ * A standard control and indicating equipment (CIE)
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS

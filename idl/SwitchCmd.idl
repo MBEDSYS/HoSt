@@ -1,7 +1,7 @@
 #include <SwitchSensor.idl> 
 
 /**
- * 
+ * A switch command
  * 
  * @author <a href="mailto:emericv@mbedsys.fr">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS

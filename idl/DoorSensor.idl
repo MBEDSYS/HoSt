@@ -1,7 +1,7 @@
 #include <SecuritySensor.idl> 
 
 /**
- * This interface defines a door sensor
+ * A door sensor
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS

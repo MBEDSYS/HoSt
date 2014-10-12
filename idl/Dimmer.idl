@@ -1,5 +1,5 @@
 /**
- * This interface defines a dimmer
+ * A dimmer
  * 
  * @author <a href="mailto:emericv@mbedsys.fr">Emeric Verschuur</a>
  *         Copyright 2014 MbedSYS
@@ -10,4 +10,6 @@ interface Dimmer {
 	 * Level value in percent (data type: number between 0 and 100)
 	 */
 	attribute unsigned long level;
+	
+	
 };

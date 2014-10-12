@@ -1,7 +1,7 @@
 #include <SecuritySensor.idl> 
 
 /**
- * This interface defines a security remote control
+ * A security remote control
  * 
  * @author <a href="mailto:emericv@mbedsys.org">Emeric Verschuur</a>
  * Copyright 2014 MbedSYS
